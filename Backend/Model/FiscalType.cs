@@ -3,15 +3,16 @@ using System.Collections.Generic;
 
 namespace Backend.Model
 {
-    public partial class City
+    public partial class FiscalType
     {
-        public City()
+        public FiscalType()
         {
             Client = new HashSet<Client>();
+            Proveedor = new HashSet<Proveedor>();
         }
 
-        public int CityId { get; set; }
-        public string CityDescription { get; set; }
+        public int FiscalTypeId { get; set; }
+        public string FiscalTypeDescription { get; set; }
         public DateTime? CreatedDate { get; set; }
         public DateTime? ModifiedDate { get; set; }
         public int CreatedBy { get; set; }
@@ -20,5 +21,6 @@ namespace Backend.Model
         public virtual User CreatedByNavigation { get; set; }
         public virtual User ModifiedByNavigation { get; set; }
         public virtual ICollection<Client> Client { get; set; }
+        public virtual ICollection<Proveedor> Proveedor { get; set; }
     }
 }

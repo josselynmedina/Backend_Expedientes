@@ -7,7 +7,7 @@ namespace Backend.Model
     {
         public int InconsistencyId { get; set; }
         public DateTime? FechaRegistro { get; set; }
-        public DateTime? FechaRecepcionDocumento { get; set; }
+        public DateTime? FechaRecepcion { get; set; }
         public int ClientId { get; set; }
         public string HojaRuta { get; set; }
         public int ProveedorId { get; set; }

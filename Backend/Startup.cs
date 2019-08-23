@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Backend.Model;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -28,18 +29,13 @@ namespace Backend
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc()
-              .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
-              .AddJsonOptions(options => {
-                  var resolver = options.SerializerSettings.ContractResolver;
-                  if (resolver != null)
-                      (resolver as DefaultContractResolver).NamingStrategy = null;
-              });
-            services.AddDbContext<ProcesoLogisticoContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
-
-            services.AddDefaultIdentity<User>()
-                .AddRoles<Rol>()
-                .AddEntityFrameworkStores<ProcesoLogisticoContext>();
+             .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
+             .AddJsonOptions(options => {
+                 var resolver = options.SerializerSettings.ContractResolver;
+                 if (resolver != null)
+                     (resolver as DefaultContractResolver).NamingStrategy = null;
+             });
+           
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -58,3 +54,4 @@ namespace Backend
         }
     }
 }
+

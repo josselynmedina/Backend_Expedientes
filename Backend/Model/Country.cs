@@ -10,9 +10,8 @@ namespace Backend.Model
             ClientBillingCountry = new HashSet<Client>();
             ClientCountry = new HashSet<Client>();
             ClientMarket = new HashSet<Client>();
-            CountryCity = new HashSet<CountryCity>();
             ProveedorCountry = new HashSet<Proveedor>();
-            ProveedorOperationCountryNavigation = new HashSet<Proveedor>();
+            ProveedorOperationCountry = new HashSet<Proveedor>();
         }
 
         public int CountryId { get; set; }
@@ -27,8 +26,7 @@ namespace Backend.Model
         public virtual ICollection<Client> ClientBillingCountry { get; set; }
         public virtual ICollection<Client> ClientCountry { get; set; }
         public virtual ICollection<Client> ClientMarket { get; set; }
-        public virtual ICollection<CountryCity> CountryCity { get; set; }
         public virtual ICollection<Proveedor> ProveedorCountry { get; set; }
-        public virtual ICollection<Proveedor> ProveedorOperationCountryNavigation { get; set; }
+        public virtual ICollection<Proveedor> ProveedorOperationCountry { get; set; }
     }
 }

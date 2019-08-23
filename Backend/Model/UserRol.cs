@@ -14,7 +14,5 @@ namespace Backend.Model
 
         public virtual User CreatedByNavigation { get; set; }
         public virtual User ModifiedByNavigation { get; set; }
-        public virtual Rol Rol { get; set; }
-        public virtual User User { get; set; }
     }
 }

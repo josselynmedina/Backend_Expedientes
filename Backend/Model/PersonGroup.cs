@@ -3,15 +3,15 @@ using System.Collections.Generic;
 
 namespace Backend.Model
 {
-    public partial class RegistryTributarioType
+    public partial class PersonGroup
     {
-        public RegistryTributarioType()
+        public PersonGroup()
         {
-            Client = new HashSet<Client>();
+            Proveedor = new HashSet<Proveedor>();
         }
 
-        public int RegistryTributarioTypeId { get; set; }
-        public string RegistryTributarioTypeDescription { get; set; }
+        public int PersonGroupId { get; set; }
+        public string PersonGroupDescription { get; set; }
         public DateTime? CreatedDate { get; set; }
         public DateTime? ModifiedDate { get; set; }
         public int CreatedBy { get; set; }
@@ -19,6 +19,6 @@ namespace Backend.Model
 
         public virtual User CreatedByNavigation { get; set; }
         public virtual User ModifiedByNavigation { get; set; }
-        public virtual ICollection<Client> Client { get; set; }
+        public virtual ICollection<Proveedor> Proveedor { get; set; }
     }
 }

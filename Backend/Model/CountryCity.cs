@@ -12,8 +12,6 @@ namespace Backend.Model
         public int CreatedBy { get; set; }
         public int ModifiedBy { get; set; }
 
-        public virtual City City { get; set; }
-        public virtual Country Country { get; set; }
         public virtual User CreatedByNavigation { get; set; }
         public virtual User ModifiedByNavigation { get; set; }
     }
