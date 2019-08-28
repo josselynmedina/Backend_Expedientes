@@ -20,6 +20,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -87,6 +89,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.Cors">
       <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.3\lib\net45\System.Web.Cors.dll</HintPath>
     </Reference>
@@ -199,6 +203,10 @@
     <Compile Include="Migrations\201801311545174_ChangedDefaultColumnNames.Designer.cs">
       <DependentUpon>201801311545174_ChangedDefaultColumnNames.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908272237123_InitialPG.cs" />
+    <Compile Include="Migrations\201908272237123_InitialPG.Designer.cs">
+      <DependentUpon>201908272237123_InitialPG.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -258,6 +266,9 @@
     <EmbeddedResource Include="Migrations\201801311545174_ChangedDefaultColumnNames.resx">
       <DependentUpon>201801311545174_ChangedDefaultColumnNames.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908272237123_InitialPG.resx">
+      <DependentUpon>201908272237123_InitialPG.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -265,6 +276,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

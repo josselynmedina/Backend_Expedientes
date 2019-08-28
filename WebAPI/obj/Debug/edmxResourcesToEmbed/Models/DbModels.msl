@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PG_ProcesoLogisticoModelStoreContainer" CdmEntityContainer="DbModel">
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="PG_ProcesoLogisticoModel.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="PG_ProcesoLogisticoModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="CategoryDescription" ColumnName="CategoryDescription" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="PG_ProcesoLogisticoModel.Client">
+        <MappingFragment StoreEntitySet="Client">
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="EmpresarialGroup" ColumnName="EmpresarialGroup" />
+          <ScalarProperty Name="RegistryTributario" ColumnName="RegistryTributario" />
+          <ScalarProperty Name="FiscalTypeId" ColumnName="FiscalTypeId" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="WebPage" ColumnName="WebPage" />
+          <ScalarProperty Name="BussinesActivity" ColumnName="BussinesActivity" />
+          <ScalarProperty Name="ProductLineId" ColumnName="ProductLineId" />
+          <ScalarProperty Name="Vision" ColumnName="Vision" />
+          <ScalarProperty Name="Mision" ColumnName="Mision" />
+          <ScalarProperty Name="Valores" ColumnName="Valores" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Industry" ColumnName="Industry" />
+          <ScalarProperty Name="IndustryType" ColumnName="IndustryType" />
+          <ScalarProperty Name="RSE" ColumnName="RSE" />
+          <ScalarProperty Name="Marcas" ColumnName="Marcas" />
+          <ScalarProperty Name="MarketId" ColumnName="MarketId" />
+          <ScalarProperty Name="BillingCountryId" ColumnName="BillingCountryId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="PG_ProcesoLogisticoModel.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="CountryDescription" ColumnName="CountryDescription" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Documents">
+      <EntityTypeMapping TypeName="PG_ProcesoLogisticoModel.Document">
+        <MappingFragment StoreEntitySet="Document">
+          <ScalarProperty Name="DocumentId" ColumnName="DocumentId" />
+          <ScalarProperty Name="DocumenDescription" ColumnName="DocumenDescription" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FiscalTypes">
+      <EntityTypeMapping TypeName="PG_ProcesoLogisticoModel.FiscalType">
+        <MappingFragment StoreEntitySet="FiscalType">
+          <ScalarProperty Name="FiscalTypeId" ColumnName="FiscalTypeId" />
+          <ScalarProperty Name="FiscalDescription" ColumnName="FiscalDescription" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inconsistencies">
+      <EntityTypeMapping TypeName="PG_ProcesoLogisticoModel.Inconsistency">
+        <MappingFragment StoreEntitySet="Inconsistency">
+          <ScalarProperty Name="InconsistencyId" ColumnName="InconsistencyId" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="FechaRecepcion" ColumnName="FechaRecepcion" />
+          <ScalarProperty Name="ClienteId" ColumnName="ClienteId" />
+          <ScalarProperty Name="HojaRuta" ColumnName="HojaRuta" />
+          <ScalarProperty Name="ProveedorId" ColumnName="ProveedorId" />
+          <ScalarProperty Name="DocumentId" ColumnName="DocumentId" />
+          <ScalarProperty Name="DocumentNumber" ColumnName="DocumentNumber" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Comentario" ColumnName="Comentario" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IndustryTypes">
+      <EntityTypeMapping TypeName="PG_ProcesoLogisticoModel.IndustryType">
+        <MappingFragment StoreEntitySet="IndustryType">
+          <ScalarProperty Name="IndustryTypeId" ColumnName="IndustryTypeId" />
+          <ScalarProperty Name="IndustryTypeDescription" ColumnName="IndustryTypeDescription" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonGroups">
+      <EntityTypeMapping TypeName="PG_ProcesoLogisticoModel.PersonGroup">
+        <MappingFragment StoreEntitySet="PersonGroup">
+          <ScalarProperty Name="PersonGroupId" ColumnName="PersonGroupId" />
+          <ScalarProperty Name="PersonGroupDescription" ColumnName="PersonGroupDescription" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductLines">
+      <EntityTypeMapping TypeName="PG_ProcesoLogisticoModel.ProductLine">
+        <MappingFragment StoreEntitySet="ProductLine">
+          <ScalarProperty Name="ProductLineId" ColumnName="ProductLineId" />
+          <ScalarProperty Name="ProductLineDescription" ColumnName="ProductLineDescription" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proveedors">
+      <EntityTypeMapping TypeName="PG_ProcesoLogisticoModel.Proveedor">
+        <MappingFragment StoreEntitySet="Proveedor">
+          <ScalarProperty Name="ProveedorId" ColumnName="ProveedorId" />
+          <ScalarProperty Name="ProveedorDescription" ColumnName="ProveedorDescription" />
+          <ScalarProperty Name="IdentificadorFiscal" ColumnName="IdentificadorFiscal" />
+          <ScalarProperty Name="FiscalTypeId" ColumnName="FiscalTypeId" />
+          <ScalarProperty Name="PersonGroupId" ColumnName="PersonGroupId" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="SegmentId" ColumnName="SegmentId" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="OperationCountry" ColumnName="OperationCountry" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="PG_ProcesoLogisticoModel.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Segments">
+      <EntityTypeMapping TypeName="PG_ProcesoLogisticoModel.Segment">
+        <MappingFragment StoreEntitySet="Segment">
+          <ScalarProperty Name="SegmentId" ColumnName="SegmentId" />
+          <ScalarProperty Name="SegmentDescription" ColumnName="SegmentDescription" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="PG_ProcesoLogisticoModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="PG_ProcesoLogisticoModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserClaims">
+      <EntityTypeMapping TypeName="PG_ProcesoLogisticoModel.UserClaim">
+        <MappingFragment StoreEntitySet="UserClaim">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserLogins">
+      <EntityTypeMapping TypeName="PG_ProcesoLogisticoModel.UserLogin">
+        <MappingFragment StoreEntitySet="UserLogin">
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="UserRole" TypeName="PG_ProcesoLogisticoModel.UserRole" StoreEntitySet="UserRole">
+      <EndProperty Name="Role">
+        <ScalarProperty Name="Id" ColumnName="RoleId" />
+      </EndProperty>
+      <EndProperty Name="User">
+        <ScalarProperty Name="Id" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
