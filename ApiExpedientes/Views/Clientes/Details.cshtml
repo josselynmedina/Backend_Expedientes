@@ -1,0 +1,202 @@
+﻿@model ApiExpedientes.Models.Cliente
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.GrupoEmpresarial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GrupoEmpresarial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RegistroTributario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RegistroTributario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WebPage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WebPage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Actividad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Actividad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vision)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vision)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mision)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mision)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valores)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valores)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Industria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Industria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RSE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RSE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Marcas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Marcas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pai.Pais)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pai.Pais)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pai1.Pais)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pai1.Pais)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pai2.Pais)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pai2.Pais)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoIndustria1.TipoIndustria1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoIndustria1.TipoIndustria1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoFiscal.TipoFiscal1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoFiscal.TipoFiscal1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario1.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario1.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LineaProducto1.LineaProducto1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LineaProducto1.LineaProducto1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Segmento1.Segmento1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Segmento1.Segmento1)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ClienteId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,99 @@
+﻿@model IEnumerable<ApiExpedientes.Models.Inconsistencia>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaRegistro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaRecepcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HojaRuta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroDocumento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModifiedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Categoria1.Categoria1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cliente1.GrupoEmpresarial)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Documento1.Documento1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuario.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Proveedor1.Proveedor1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuario1.UserName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaRegistro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaRecepcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HojaRuta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroDocumento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModifiedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Categoria1.Categoria1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cliente1.GrupoEmpresarial)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Documento1.Documento1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuario.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Proveedor1.Proveedor1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuario1.UserName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.InconsistenciaId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.InconsistenciaId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.InconsistenciaId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ProcesoLogisticoModelStoreContainer" CdmEntityContainer="ProcesoLogisticoEntities">
+    <EntitySetMapping Name="Categorias">
+      <EntityTypeMapping TypeName="ProcesoLogisticoModel.Categoria">
+        <MappingFragment StoreEntitySet="Categoria">
+          <ScalarProperty Name="CategoriaId" ColumnName="CategoriaId" />
+          <ScalarProperty Name="Categoria1" ColumnName="Categoria" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clientes">
+      <EntityTypeMapping TypeName="ProcesoLogisticoModel.Cliente">
+        <MappingFragment StoreEntitySet="Cliente">
+          <ScalarProperty Name="ClienteId" ColumnName="ClienteId" />
+          <ScalarProperty Name="GrupoEmpresarial" ColumnName="GrupoEmpresarial" />
+          <ScalarProperty Name="RegistroTributario" ColumnName="RegistroTributario" />
+          <ScalarProperty Name="TipoRegistro" ColumnName="TipoRegistro" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="WebPage" ColumnName="WebPage" />
+          <ScalarProperty Name="Actividad" ColumnName="Actividad" />
+          <ScalarProperty Name="LineaProducto" ColumnName="LineaProducto" />
+          <ScalarProperty Name="Vision" ColumnName="Vision" />
+          <ScalarProperty Name="Mision" ColumnName="Mision" />
+          <ScalarProperty Name="Valores" ColumnName="Valores" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Industria" ColumnName="Industria" />
+          <ScalarProperty Name="TipoIndustria" ColumnName="TipoIndustria" />
+          <ScalarProperty Name="Segmento" ColumnName="Segmento" />
+          <ScalarProperty Name="RSE" ColumnName="RSE" />
+          <ScalarProperty Name="Marcas" ColumnName="Marcas" />
+          <ScalarProperty Name="Mercado" ColumnName="Mercado" />
+          <ScalarProperty Name="PaisFacturacion" ColumnName="PaisFacturacion" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CodigoSaps">
+      <EntityTypeMapping TypeName="ProcesoLogisticoModel.CodigoSap">
+        <MappingFragment StoreEntitySet="CodigoSap">
+          <ScalarProperty Name="CodigoSapId" ColumnName="CodigoSapId" />
+          <ScalarProperty Name="CodigoSap1" ColumnName="CodigoSap" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contactoes">
+      <EntityTypeMapping TypeName="ProcesoLogisticoModel.Contacto">
+        <MappingFragment StoreEntitySet="Contacto">
+          <ScalarProperty Name="ContactoId" ColumnName="ContactoId" />
+          <ScalarProperty Name="Contacto1" ColumnName="Contacto" />
+          <ScalarProperty Name="Posicion" ColumnName="Posicion" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Cliente" ColumnName="Cliente" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Documentoes">
+      <EntityTypeMapping TypeName="ProcesoLogisticoModel.Documento">
+        <MappingFragment StoreEntitySet="Documento">
+          <ScalarProperty Name="DocumentoId" ColumnName="DocumentoId" />
+          <ScalarProperty Name="Documento1" ColumnName="Documento" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Financiamientoes">
+      <EntityTypeMapping TypeName="ProcesoLogisticoModel.Financiamiento">
+        <MappingFragment StoreEntitySet="Financiamiento">
+          <ScalarProperty Name="FinanciamientoId" ColumnName="FinanciamientoId" />
+          <ScalarProperty Name="Financiamiento1" ColumnName="Financiamiento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GrupoPersonas">
+      <EntityTypeMapping TypeName="ProcesoLogisticoModel.GrupoPersona">
+        <MappingFragment StoreEntitySet="GrupoPersona">
+          <ScalarProperty Name="GrupoPersonaId" ColumnName="GrupoPersonaId" />
+          <ScalarProperty Name="GrupoPersona1" ColumnName="GrupoPersona" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inconsistencias">
+      <EntityTypeMapping TypeName="ProcesoLogisticoModel.Inconsistencia">
+        <MappingFragment StoreEntitySet="Inconsistencia">
+          <ScalarProperty Name="InconsistenciaId" ColumnName="InconsistenciaId" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="FechaRecepcion" ColumnName="FechaRecepcion" />
+          <ScalarProperty Name="Cliente" ColumnName="Cliente" />
+          <ScalarProperty Name="HojaRuta" ColumnName="HojaRuta" />
+          <ScalarProperty Name="Proveedor" ColumnName="Proveedor" />
+          <ScalarProperty Name="Documento" ColumnName="Documento" />
+          <ScalarProperty Name="NumeroDocumento" ColumnName="NumeroDocumento" />
+          <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LineaProductoes">
+      <EntityTypeMapping TypeName="ProcesoLogisticoModel.LineaProducto">
+        <MappingFragment StoreEntitySet="LineaProducto">
+          <ScalarProperty Name="LineaProductoId" ColumnName="LineaProductoId" />
+          <ScalarProperty Name="LineaProducto1" ColumnName="LineaProducto" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Monedas">
+      <EntityTypeMapping TypeName="ProcesoLogisticoModel.Moneda">
+        <MappingFragment StoreEntitySet="Moneda">
+          <ScalarProperty Name="MonedaId" ColumnName="MonedaId" />
+          <ScalarProperty Name="Moneda1" ColumnName="Moneda" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pais">
+      <EntityTypeMapping TypeName="ProcesoLogisticoModel.Pai">
+        <MappingFragment StoreEntitySet="Pais">
+          <ScalarProperty Name="PaisId" ColumnName="PaisId" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Privilegios">
+      <EntityTypeMapping TypeName="ProcesoLogisticoModel.Privilegio">
+        <MappingFragment StoreEntitySet="Privilegios">
+          <ScalarProperty Name="PrivilegiosId" ColumnName="PrivilegiosId" />
+          <ScalarProperty Name="Privilegio1" ColumnName="Privilegio" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proveedors">
+      <EntityTypeMapping TypeName="ProcesoLogisticoModel.Proveedor">
+        <MappingFragment StoreEntitySet="Proveedor">
+          <ScalarProperty Name="ProveedorId" ColumnName="ProveedorId" />
+          <ScalarProperty Name="Proveedor1" ColumnName="Proveedor" />
+          <ScalarProperty Name="IdentificadorFiscal" ColumnName="IdentificadorFiscal" />
+          <ScalarProperty Name="TipoIdentificador" ColumnName="TipoIdentificador" />
+          <ScalarProperty Name="GrupoPersona" ColumnName="GrupoPersona" />
+          <ScalarProperty Name="Cliente" ColumnName="Cliente" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+          <ScalarProperty Name="PaisOperacion" ColumnName="PaisOperacion" />
+          <ScalarProperty Name="Segmento" ColumnName="Segmento" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rols">
+      <EntityTypeMapping TypeName="ProcesoLogisticoModel.Rol">
+        <MappingFragment StoreEntitySet="Rol">
+          <ScalarProperty Name="RolId" ColumnName="RolId" />
+          <ScalarProperty Name="RolDescription" ColumnName="RolDescription" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rol_Privilegio">
+      <EntityTypeMapping TypeName="ProcesoLogisticoModel.Rol_Privilegio">
+        <MappingFragment StoreEntitySet="Rol_Privilegio">
+          <ScalarProperty Name="RolId" ColumnName="RolId" />
+          <ScalarProperty Name="PrivilegioId" ColumnName="PrivilegioId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Segmentoes">
+      <EntityTypeMapping TypeName="ProcesoLogisticoModel.Segmento">
+        <MappingFragment StoreEntitySet="Segmento">
+          <ScalarProperty Name="SegmentoId" ColumnName="SegmentoId" />
+          <ScalarProperty Name="Segmento1" ColumnName="Segmento" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SolicitudCreditoes">
+      <EntityTypeMapping TypeName="ProcesoLogisticoModel.SolicitudCredito">
+        <MappingFragment StoreEntitySet="SolicitudCredito">
+          <ScalarProperty Name="CreditoId" ColumnName="CreditoId" />
+          <ScalarProperty Name="Cliente" ColumnName="Cliente" />
+          <ScalarProperty Name="TramitesMensualesEsperados" ColumnName="TramitesMensualesEsperados" />
+          <ScalarProperty Name="ProyeccionCM1Mensual" ColumnName="ProyeccionCM1Mensual" />
+          <ScalarProperty Name="ProyeccionVolumenMensual" ColumnName="ProyeccionVolumenMensual" />
+          <ScalarProperty Name="MontoSolicitado" ColumnName="MontoSolicitado" />
+          <ScalarProperty Name="TiempoCredito" ColumnName="TiempoCredito" />
+          <ScalarProperty Name="Modeda" ColumnName="Modeda" />
+          <ScalarProperty Name="Division" ColumnName="Division" />
+          <ScalarProperty Name="TipoPago" ColumnName="TipoPago" />
+          <ScalarProperty Name="FinanciamientoImpuestos" ColumnName="FinanciamientoImpuestos" />
+          <ScalarProperty Name="TiempoCreditoImpuesto" ColumnName="TiempoCreditoImpuesto" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoFiscals">
+      <EntityTypeMapping TypeName="ProcesoLogisticoModel.TipoFiscal">
+        <MappingFragment StoreEntitySet="TipoFiscal">
+          <ScalarProperty Name="TipoFiscalId" ColumnName="TipoFiscalId" />
+          <ScalarProperty Name="TipoFiscal1" ColumnName="TipoFiscal" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoIndustrias">
+      <EntityTypeMapping TypeName="ProcesoLogisticoModel.TipoIndustria">
+        <MappingFragment StoreEntitySet="TipoIndustria">
+          <ScalarProperty Name="TipoIndustriaId" ColumnName="TipoIndustriaId" />
+          <ScalarProperty Name="TipoIndustria1" ColumnName="TipoIndustria" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoPagoes">
+      <EntityTypeMapping TypeName="ProcesoLogisticoModel.TipoPago">
+        <MappingFragment StoreEntitySet="TipoPago">
+          <ScalarProperty Name="TipoPagoId" ColumnName="TipoPagoId" />
+          <ScalarProperty Name="TipoPago1" ColumnName="TipoPago" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_Rol">
+      <EntityTypeMapping TypeName="ProcesoLogisticoModel.User_Rol">
+        <MappingFragment StoreEntitySet="User_Rol">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="RolId" ColumnName="RolId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="ProcesoLogisticoModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SP_USUARIO_INSERT" FunctionName="ProcesoLogisticoModel.Store.SP_USUARIO_INSERT" />
+  </EntityContainerMapping>
+</Mapping>

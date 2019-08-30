@@ -1,0 +1,1434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProcesoLogisticoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Categoria">
+    <Key>
+      <PropertyRef Name="CategoriaId" />
+    </Key>
+    <Property Name="CategoriaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Categoria1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="0" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedBy" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_Categoria_CreatedBy" FromRole="Categoria" ToRole="Usuario" />
+    <NavigationProperty Name="Usuario1" Relationship="Self.FK_Categoria_Usuario" FromRole="Categoria" ToRole="Usuario" />
+    <NavigationProperty Name="Inconsistencias" Relationship="Self.FK_Inconsistencia_Categoria" FromRole="Categoria" ToRole="Inconsistencia" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="ClienteId" />
+    </Key>
+    <Property Name="ClienteId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GrupoEmpresarial" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RegistroTributario" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TipoRegistro" Type="Int32" Nullable="false" />
+    <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WebPage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Actividad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LineaProducto" Type="Int32" Nullable="false" />
+    <Property Name="Vision" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Mision" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Valores" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Pais" Type="Int32" Nullable="false" />
+    <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Industria" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TipoIndustria" Type="Int32" Nullable="false" />
+    <Property Name="Segmento" Type="Int32" Nullable="false" />
+    <Property Name="RSE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Marcas" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Mercado" Type="Int32" Nullable="false" />
+    <Property Name="PaisFacturacion" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="0" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedBy" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Pai" Relationship="Self.FK_Cliente_Mercado" FromRole="Cliente" ToRole="Pais" />
+    <NavigationProperty Name="Pai1" Relationship="Self.FK_Cliente_Pais" FromRole="Cliente" ToRole="Pais" />
+    <NavigationProperty Name="Pai2" Relationship="Self.FK_Cliente_PaisFacturacion" FromRole="Cliente" ToRole="Pais" />
+    <NavigationProperty Name="TipoIndustria1" Relationship="Self.FK_Cliente_TipoIndustria" FromRole="Cliente" ToRole="TipoIndustria" />
+    <NavigationProperty Name="TipoFiscal" Relationship="Self.FK_Cliente_TipoRegistro" FromRole="Cliente" ToRole="TipoFiscal" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_Cliente_Usuario" FromRole="Cliente" ToRole="Usuario" />
+    <NavigationProperty Name="Usuario1" Relationship="Self.FK_Cliente_UsuarioModify" FromRole="Cliente" ToRole="Usuario" />
+    <NavigationProperty Name="Contactoes" Relationship="Self.FK_Contacto_Cliente" FromRole="Cliente" ToRole="Contacto" />
+    <NavigationProperty Name="Inconsistencias" Relationship="Self.FK_Inconsistencia_Cliente" FromRole="Cliente" ToRole="Inconsistencia" />
+    <NavigationProperty Name="Proveedors" Relationship="Self.FK_Proveedor_Cliente" FromRole="Cliente" ToRole="Proveedor" />
+    <NavigationProperty Name="SolicitudCreditoes" Relationship="Self.FK_SolicitudCredito_Cliente" FromRole="Cliente" ToRole="SolicitudCredito" />
+    <NavigationProperty Name="LineaProducto1" Relationship="ProcesoLogisticoModel.FK_Cliente_LineaProducto" FromRole="Cliente" ToRole="LineaProducto" />
+    <NavigationProperty Name="Segmento1" Relationship="ProcesoLogisticoModel.FK_Cliente_Segmento" FromRole="Cliente" ToRole="Segmento" />
+  </EntityType>
+  <EntityType Name="CodigoSap">
+    <Key>
+      <PropertyRef Name="CodigoSapId" />
+    </Key>
+    <Property Name="CodigoSapId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CodigoSap1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="0" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedBy" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_CodigoSap_ModifiedBy" FromRole="CodigoSap" ToRole="Usuario" />
+    <NavigationProperty Name="Usuario1" Relationship="Self.FK_CodigoSap_Usuario" FromRole="CodigoSap" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Contacto">
+    <Key>
+      <PropertyRef Name="ContactoId" />
+    </Key>
+    <Property Name="ContactoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Contacto1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Posicion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Cliente" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="0" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedBy" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Cliente1" Relationship="Self.FK_Contacto_Cliente" FromRole="Contacto" ToRole="Cliente" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_Contacto_Modified" FromRole="Contacto" ToRole="Usuario" />
+    <NavigationProperty Name="Usuario1" Relationship="Self.FK_Contacto_Usuario" FromRole="Contacto" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Documento">
+    <Key>
+      <PropertyRef Name="DocumentoId" />
+    </Key>
+    <Property Name="DocumentoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Documento1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="0" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedBy" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_Documento_ModifiedBy" FromRole="Documento" ToRole="Usuario" />
+    <NavigationProperty Name="Usuario1" Relationship="Self.FK_Documento_Usuario" FromRole="Documento" ToRole="Usuario" />
+    <NavigationProperty Name="Inconsistencias" Relationship="Self.FK_Inconsistencia_Documento" FromRole="Documento" ToRole="Inconsistencia" />
+  </EntityType>
+  <EntityType Name="Financiamiento">
+    <Key>
+      <PropertyRef Name="FinanciamientoId" />
+    </Key>
+    <Property Name="FinanciamientoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Financiamiento1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="GrupoPersona">
+    <Key>
+      <PropertyRef Name="GrupoPersonaId" />
+    </Key>
+    <Property Name="GrupoPersonaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GrupoPersona1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="0" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedBy" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_GrupoPersona_ModifiedBy" FromRole="GrupoPersona" ToRole="Usuario" />
+    <NavigationProperty Name="Usuario1" Relationship="Self.FK_GrupoPersona_Usuario" FromRole="GrupoPersona" ToRole="Usuario" />
+    <NavigationProperty Name="Proveedors" Relationship="Self.FK_Proveedor_GrupoPersona" FromRole="GrupoPersona" ToRole="Proveedor" />
+  </EntityType>
+  <EntityType Name="Inconsistencia">
+    <Key>
+      <PropertyRef Name="InconsistenciaId" />
+    </Key>
+    <Property Name="InconsistenciaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FechaRegistro" Type="DateTime" Precision="0" />
+    <Property Name="FechaRecepcion" Type="DateTime" Precision="0" />
+    <Property Name="Cliente" Type="Int32" Nullable="false" />
+    <Property Name="HojaRuta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Proveedor" Type="Int32" Nullable="false" />
+    <Property Name="Documento" Type="Int32" Nullable="false" />
+    <Property Name="NumeroDocumento" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Categoria" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="0" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedBy" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Categoria1" Relationship="Self.FK_Inconsistencia_Categoria" FromRole="Inconsistencia" ToRole="Categoria" />
+    <NavigationProperty Name="Cliente1" Relationship="Self.FK_Inconsistencia_Cliente" FromRole="Inconsistencia" ToRole="Cliente" />
+    <NavigationProperty Name="Documento1" Relationship="Self.FK_Inconsistencia_Documento" FromRole="Inconsistencia" ToRole="Documento" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_Inconsistencia_Modifiedby" FromRole="Inconsistencia" ToRole="Usuario" />
+    <NavigationProperty Name="Proveedor1" Relationship="Self.FK_Inconsistencia_Proveedor" FromRole="Inconsistencia" ToRole="Proveedor" />
+    <NavigationProperty Name="Usuario1" Relationship="Self.FK_Inconsistencia_Usuario" FromRole="Inconsistencia" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="LineaProducto">
+    <Key>
+      <PropertyRef Name="LineaProductoId" />
+    </Key>
+    <Property Name="LineaProductoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LineaProducto1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="0" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedBy" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_LineaProducto_ModifiedBy" FromRole="LineaProducto" ToRole="Usuario" />
+    <NavigationProperty Name="Usuario1" Relationship="Self.FK_LineaProducto_Usuario" FromRole="LineaProducto" ToRole="Usuario" />
+    <NavigationProperty Name="Clientes" Relationship="ProcesoLogisticoModel.FK_Cliente_LineaProducto" FromRole="LineaProducto" ToRole="Cliente" />
+  </EntityType>
+  <EntityType Name="Moneda">
+    <Key>
+      <PropertyRef Name="MonedaId" />
+    </Key>
+    <Property Name="MonedaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Moneda1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SolicitudCreditoes" Relationship="Self.FK_SolicitudCredito_Moneda" FromRole="Moneda" ToRole="SolicitudCredito" />
+  </EntityType>
+  <EntityType Name="Pai">
+    <Key>
+      <PropertyRef Name="PaisId" />
+    </Key>
+    <Property Name="PaisId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Pais" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="0" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedBy" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Clientes" Relationship="Self.FK_Cliente_Mercado" FromRole="Pais" ToRole="Cliente" />
+    <NavigationProperty Name="Clientes1" Relationship="Self.FK_Cliente_Pais" FromRole="Pais" ToRole="Cliente" />
+    <NavigationProperty Name="Clientes2" Relationship="Self.FK_Cliente_PaisFacturacion" FromRole="Pais" ToRole="Cliente" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_Pais_ModifiedBy" FromRole="Pais" ToRole="Usuario" />
+    <NavigationProperty Name="Usuario1" Relationship="Self.FK_Pais_Usuario" FromRole="Pais" ToRole="Usuario" />
+    <NavigationProperty Name="Proveedors" Relationship="Self.FK_Proveedor_Pais" FromRole="Pais" ToRole="Proveedor" />
+    <NavigationProperty Name="Proveedors1" Relationship="Self.FK_Proveedor_PaisO" FromRole="Pais" ToRole="Proveedor" />
+  </EntityType>
+  <EntityType Name="Privilegio">
+    <Key>
+      <PropertyRef Name="PrivilegiosId" />
+    </Key>
+    <Property Name="PrivilegiosId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Privilegio1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="0" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedBy" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_Privilegios_Usuario" FromRole="Privilegios" ToRole="Usuario" />
+    <NavigationProperty Name="Usuario1" Relationship="Self.FK_Privilegios_UsuarioM" FromRole="Privilegios" ToRole="Usuario" />
+    <NavigationProperty Name="Rol_Privilegio" Relationship="Self.FK_Rol_Privilegio_Privilegios" FromRole="Privilegios" ToRole="Rol_Privilegio" />
+  </EntityType>
+  <EntityType Name="Proveedor">
+    <Key>
+      <PropertyRef Name="ProveedorId" />
+    </Key>
+    <Property Name="ProveedorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Proveedor1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IdentificadorFiscal" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TipoIdentificador" Type="Int32" Nullable="false" />
+    <Property Name="GrupoPersona" Type="Int32" Nullable="false" />
+    <Property Name="Cliente" Type="Int32" Nullable="false" />
+    <Property Name="Pais" Type="Int32" Nullable="false" />
+    <Property Name="PaisOperacion" Type="Int32" Nullable="false" />
+    <Property Name="Segmento" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="0" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedBy" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Cliente1" Relationship="Self.FK_Proveedor_Cliente" FromRole="Proveedor" ToRole="Cliente" />
+    <NavigationProperty Name="GrupoPersona1" Relationship="Self.FK_Proveedor_GrupoPersona" FromRole="Proveedor" ToRole="GrupoPersona" />
+    <NavigationProperty Name="Inconsistencias" Relationship="Self.FK_Inconsistencia_Proveedor" FromRole="Proveedor" ToRole="Inconsistencia" />
+    <NavigationProperty Name="Pai" Relationship="Self.FK_Proveedor_Pais" FromRole="Proveedor" ToRole="Pais" />
+    <NavigationProperty Name="Pai1" Relationship="Self.FK_Proveedor_PaisO" FromRole="Proveedor" ToRole="Pais" />
+    <NavigationProperty Name="Segmento1" Relationship="Self.FK_Proveedor_Segmento" FromRole="Proveedor" ToRole="Segmento" />
+    <NavigationProperty Name="TipoFiscal" Relationship="Self.FK_Proveedor_TipoFiscal" FromRole="Proveedor" ToRole="TipoFiscal" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_Proveedor_Usuario" FromRole="Proveedor" ToRole="Usuario" />
+    <NavigationProperty Name="Usuario1" Relationship="Self.FK_Proveedor_UsuarioM" FromRole="Proveedor" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Rol">
+    <Key>
+      <PropertyRef Name="RolId" />
+    </Key>
+    <Property Name="RolId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RolDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="0" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedBy" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Rol_Privilegio" Relationship="Self.FK_Rol_Privilegio_Rol" FromRole="Rol" ToRole="Rol_Privilegio" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_Rol_Usuario" FromRole="Rol" ToRole="Usuario" />
+    <NavigationProperty Name="Usuario1" Relationship="Self.FK_Rol_UsuarioM" FromRole="Rol" ToRole="Usuario" />
+    <NavigationProperty Name="User_Rol" Relationship="Self.FK_User_Rol_Rol" FromRole="Rol" ToRole="User_Rol" />
+  </EntityType>
+  <EntityType Name="Rol_Privilegio">
+    <Key>
+      <PropertyRef Name="RolId" />
+      <PropertyRef Name="PrivilegioId" />
+    </Key>
+    <Property Name="RolId" Type="Int32" Nullable="false" />
+    <Property Name="PrivilegioId" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="0" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedBy" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Privilegio" Relationship="Self.FK_Rol_Privilegio_Privilegios" FromRole="Rol_Privilegio" ToRole="Privilegios" />
+    <NavigationProperty Name="Rol" Relationship="Self.FK_Rol_Privilegio_Rol" FromRole="Rol_Privilegio" ToRole="Rol" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_Rol_Privilegio_Usuario" FromRole="Rol_Privilegio" ToRole="Usuario" />
+    <NavigationProperty Name="Usuario1" Relationship="Self.FK_Rol_Privilegio_UsuarioM" FromRole="Rol_Privilegio" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Segmento">
+    <Key>
+      <PropertyRef Name="SegmentoId" />
+    </Key>
+    <Property Name="SegmentoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Segmento1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="0" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedBy" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Proveedors" Relationship="Self.FK_Proveedor_Segmento" FromRole="Segmento" ToRole="Proveedor" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_Segmento_Usuario" FromRole="Segmento" ToRole="Usuario" />
+    <NavigationProperty Name="Usuario1" Relationship="Self.FK_Segmento_UsuarioM" FromRole="Segmento" ToRole="Usuario" />
+    <NavigationProperty Name="Clientes" Relationship="ProcesoLogisticoModel.FK_Cliente_Segmento" FromRole="Segmento" ToRole="Cliente" />
+  </EntityType>
+  <EntityType Name="SolicitudCredito">
+    <Key>
+      <PropertyRef Name="CreditoId" />
+      <PropertyRef Name="Cliente" />
+    </Key>
+    <Property Name="CreditoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Cliente" Type="Int32" Nullable="false" />
+    <Property Name="TramitesMensualesEsperados" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProyeccionCM1Mensual" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProyeccionVolumenMensual" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MontoSolicitado" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="TiempoCredito" Type="Int32" />
+    <Property Name="Modeda" Type="Int32" Nullable="false" />
+    <Property Name="Division" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TipoPago" Type="Int32" Nullable="false" />
+    <Property Name="FinanciamientoImpuestos" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TiempoCreditoImpuesto" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="0" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedBy" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Cliente1" Relationship="Self.FK_SolicitudCredito_Cliente" FromRole="SolicitudCredito" ToRole="Cliente" />
+    <NavigationProperty Name="Moneda" Relationship="Self.FK_SolicitudCredito_Moneda" FromRole="SolicitudCredito" ToRole="Moneda" />
+    <NavigationProperty Name="TipoPago1" Relationship="Self.FK_SolicitudCredito_TipoPago" FromRole="SolicitudCredito" ToRole="TipoPago" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_SolicitudCredito_Usuario" FromRole="SolicitudCredito" ToRole="Usuario" />
+    <NavigationProperty Name="Usuario1" Relationship="Self.FK_SolicitudCredito_Usuario1" FromRole="SolicitudCredito" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="TipoFiscal">
+    <Key>
+      <PropertyRef Name="TipoFiscalId" />
+    </Key>
+    <Property Name="TipoFiscalId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TipoFiscal1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="0" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Clientes" Relationship="Self.FK_Cliente_TipoRegistro" FromRole="TipoFiscal" ToRole="Cliente" />
+    <NavigationProperty Name="Proveedors" Relationship="Self.FK_Proveedor_TipoFiscal" FromRole="TipoFiscal" ToRole="Proveedor" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_TipoFiscal_Usuario" FromRole="TipoFiscal" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="TipoIndustria">
+    <Key>
+      <PropertyRef Name="TipoIndustriaId" />
+    </Key>
+    <Property Name="TipoIndustriaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TipoIndustria1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="0" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedBy" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Clientes" Relationship="Self.FK_Cliente_TipoIndustria" FromRole="TipoIndustria" ToRole="Cliente" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_TipoIndustria_Usuario" FromRole="TipoIndustria" ToRole="Usuario" />
+    <NavigationProperty Name="Usuario1" Relationship="Self.FK_TipoIndustria_UsuarioM" FromRole="TipoIndustria" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="TipoPago">
+    <Key>
+      <PropertyRef Name="TipoPagoId" />
+    </Key>
+    <Property Name="TipoPagoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TipoPago1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SolicitudCreditoes" Relationship="Self.FK_SolicitudCredito_TipoPago" FromRole="TipoPago" ToRole="SolicitudCredito" />
+  </EntityType>
+  <EntityType Name="User_Rol">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RolId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="RolId" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="0" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedBy" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Rol" Relationship="Self.FK_User_Rol_Rol" FromRole="User_Rol" ToRole="Rol" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_User_Rol_Usuario" FromRole="User_Rol" ToRole="Usuario" />
+    <NavigationProperty Name="Usuario1" Relationship="Self.FK_User_Rol_UsuarioC" FromRole="User_Rol" ToRole="Usuario" />
+    <NavigationProperty Name="Usuario2" Relationship="Self.FK_User_Rol_UsuarioM" FromRole="User_Rol" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="0" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="ModifiedBy" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Categorias" Relationship="Self.FK_Categoria_CreatedBy" FromRole="Usuario" ToRole="Categoria" />
+    <NavigationProperty Name="Categorias1" Relationship="Self.FK_Categoria_Usuario" FromRole="Usuario" ToRole="Categoria" />
+    <NavigationProperty Name="Clientes" Relationship="Self.FK_Cliente_Usuario" FromRole="Usuario" ToRole="Cliente" />
+    <NavigationProperty Name="Clientes1" Relationship="Self.FK_Cliente_UsuarioModify" FromRole="Usuario" ToRole="Cliente" />
+    <NavigationProperty Name="CodigoSaps" Relationship="Self.FK_CodigoSap_ModifiedBy" FromRole="Usuario" ToRole="CodigoSap" />
+    <NavigationProperty Name="CodigoSaps1" Relationship="Self.FK_CodigoSap_Usuario" FromRole="Usuario" ToRole="CodigoSap" />
+    <NavigationProperty Name="Contactoes" Relationship="Self.FK_Contacto_Modified" FromRole="Usuario" ToRole="Contacto" />
+    <NavigationProperty Name="Contactoes1" Relationship="Self.FK_Contacto_Usuario" FromRole="Usuario" ToRole="Contacto" />
+    <NavigationProperty Name="Documentoes" Relationship="Self.FK_Documento_ModifiedBy" FromRole="Usuario" ToRole="Documento" />
+    <NavigationProperty Name="Documentoes1" Relationship="Self.FK_Documento_Usuario" FromRole="Usuario" ToRole="Documento" />
+    <NavigationProperty Name="GrupoPersonas" Relationship="Self.FK_GrupoPersona_ModifiedBy" FromRole="Usuario" ToRole="GrupoPersona" />
+    <NavigationProperty Name="GrupoPersonas1" Relationship="Self.FK_GrupoPersona_Usuario" FromRole="Usuario" ToRole="GrupoPersona" />
+    <NavigationProperty Name="Inconsistencias" Relationship="Self.FK_Inconsistencia_Modifiedby" FromRole="Usuario" ToRole="Inconsistencia" />
+    <NavigationProperty Name="Inconsistencias1" Relationship="Self.FK_Inconsistencia_Usuario" FromRole="Usuario" ToRole="Inconsistencia" />
+    <NavigationProperty Name="LineaProductoes" Relationship="Self.FK_LineaProducto_ModifiedBy" FromRole="Usuario" ToRole="LineaProducto" />
+    <NavigationProperty Name="LineaProductoes1" Relationship="Self.FK_LineaProducto_Usuario" FromRole="Usuario" ToRole="LineaProducto" />
+    <NavigationProperty Name="Pais" Relationship="Self.FK_Pais_ModifiedBy" FromRole="Usuario" ToRole="Pais" />
+    <NavigationProperty Name="Pais1" Relationship="Self.FK_Pais_Usuario" FromRole="Usuario" ToRole="Pais" />
+    <NavigationProperty Name="Privilegios" Relationship="Self.FK_Privilegios_Usuario" FromRole="Usuario" ToRole="Privilegios" />
+    <NavigationProperty Name="Privilegios1" Relationship="Self.FK_Privilegios_UsuarioM" FromRole="Usuario" ToRole="Privilegios" />
+    <NavigationProperty Name="Proveedors" Relationship="Self.FK_Proveedor_Usuario" FromRole="Usuario" ToRole="Proveedor" />
+    <NavigationProperty Name="Proveedors1" Relationship="Self.FK_Proveedor_UsuarioM" FromRole="Usuario" ToRole="Proveedor" />
+    <NavigationProperty Name="Rols" Relationship="Self.FK_Rol_Usuario" FromRole="Usuario" ToRole="Rol" />
+    <NavigationProperty Name="Rols1" Relationship="Self.FK_Rol_UsuarioM" FromRole="Usuario" ToRole="Rol" />
+    <NavigationProperty Name="Rol_Privilegio" Relationship="Self.FK_Rol_Privilegio_Usuario" FromRole="Usuario" ToRole="Rol_Privilegio" />
+    <NavigationProperty Name="Rol_Privilegio1" Relationship="Self.FK_Rol_Privilegio_UsuarioM" FromRole="Usuario" ToRole="Rol_Privilegio" />
+    <NavigationProperty Name="Segmentoes" Relationship="Self.FK_Segmento_Usuario" FromRole="Usuario" ToRole="Segmento" />
+    <NavigationProperty Name="Segmentoes1" Relationship="Self.FK_Segmento_UsuarioM" FromRole="Usuario" ToRole="Segmento" />
+    <NavigationProperty Name="SolicitudCreditoes" Relationship="Self.FK_SolicitudCredito_Usuario" FromRole="Usuario" ToRole="SolicitudCredito" />
+    <NavigationProperty Name="SolicitudCreditoes1" Relationship="Self.FK_SolicitudCredito_Usuario1" FromRole="Usuario" ToRole="SolicitudCredito" />
+    <NavigationProperty Name="TipoFiscals" Relationship="Self.FK_TipoFiscal_Usuario" FromRole="Usuario" ToRole="TipoFiscal" />
+    <NavigationProperty Name="TipoIndustrias" Relationship="Self.FK_TipoIndustria_Usuario" FromRole="Usuario" ToRole="TipoIndustria" />
+    <NavigationProperty Name="TipoIndustrias1" Relationship="Self.FK_TipoIndustria_UsuarioM" FromRole="Usuario" ToRole="TipoIndustria" />
+    <NavigationProperty Name="User_Rol" Relationship="Self.FK_User_Rol_Usuario" FromRole="Usuario" ToRole="User_Rol" />
+    <NavigationProperty Name="User_Rol1" Relationship="Self.FK_User_Rol_UsuarioC" FromRole="Usuario" ToRole="User_Rol" />
+    <NavigationProperty Name="User_Rol2" Relationship="Self.FK_User_Rol_UsuarioM" FromRole="Usuario" ToRole="User_Rol" />
+    <NavigationProperty Name="Usuario1" Relationship="Self.FK_User_CreatedBy" FromRole="Usuario" ToRole="Usuario1" />
+    <NavigationProperty Name="Usuario2" Relationship="Self.FK_User_CreatedBy" FromRole="Usuario1" ToRole="Usuario" />
+    <NavigationProperty Name="Usuario11" Relationship="Self.FK_User_ModifiedBy" FromRole="Usuario" ToRole="Usuario1" />
+    <NavigationProperty Name="Usuario3" Relationship="Self.FK_User_ModifiedBy" FromRole="Usuario1" ToRole="Usuario" />
+  </EntityType>
+  <Association Name="FK_Categoria_CreatedBy">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Categoria" Type="Self.Categoria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Categoria">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Categoria_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Categoria" Type="Self.Categoria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Categoria">
+        <PropertyRef Name="ModifiedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inconsistencia_Categoria">
+    <End Role="Categoria" Type="Self.Categoria" Multiplicity="1" />
+    <End Role="Inconsistencia" Type="Self.Inconsistencia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categoria">
+        <PropertyRef Name="CategoriaId" />
+      </Principal>
+      <Dependent Role="Inconsistencia">
+        <PropertyRef Name="Categoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cliente_Mercado">
+    <End Role="Pais" Type="Self.Pai" Multiplicity="1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pais">
+        <PropertyRef Name="PaisId" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="Mercado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cliente_Pais">
+    <End Role="Pais" Type="Self.Pai" Multiplicity="1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pais">
+        <PropertyRef Name="PaisId" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="Pais" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cliente_PaisFacturacion">
+    <End Role="Pais" Type="Self.Pai" Multiplicity="1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pais">
+        <PropertyRef Name="PaisId" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="PaisFacturacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cliente_TipoIndustria">
+    <End Role="TipoIndustria" Type="Self.TipoIndustria" Multiplicity="1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoIndustria">
+        <PropertyRef Name="TipoIndustriaId" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="TipoIndustria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cliente_TipoRegistro">
+    <End Role="TipoFiscal" Type="Self.TipoFiscal" Multiplicity="1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoFiscal">
+        <PropertyRef Name="TipoFiscalId" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="TipoRegistro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cliente_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cliente_UsuarioModify">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="ModifiedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Contacto_Cliente">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+    <End Role="Contacto" Type="Self.Contacto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="ClienteId" />
+      </Principal>
+      <Dependent Role="Contacto">
+        <PropertyRef Name="Cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inconsistencia_Cliente">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+    <End Role="Inconsistencia" Type="Self.Inconsistencia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="ClienteId" />
+      </Principal>
+      <Dependent Role="Inconsistencia">
+        <PropertyRef Name="Cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Proveedor_Cliente">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+    <End Role="Proveedor" Type="Self.Proveedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="ClienteId" />
+      </Principal>
+      <Dependent Role="Proveedor">
+        <PropertyRef Name="Cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SolicitudCredito_Cliente">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+    <End Role="SolicitudCredito" Type="Self.SolicitudCredito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="ClienteId" />
+      </Principal>
+      <Dependent Role="SolicitudCredito">
+        <PropertyRef Name="Cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CodigoSap_ModifiedBy">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="CodigoSap" Type="Self.CodigoSap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="CodigoSap">
+        <PropertyRef Name="ModifiedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CodigoSap_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="CodigoSap" Type="Self.CodigoSap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="CodigoSap">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Contacto_Modified">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Contacto" Type="Self.Contacto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Contacto">
+        <PropertyRef Name="ModifiedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Contacto_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Contacto" Type="Self.Contacto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Contacto">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Documento_ModifiedBy">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Documento" Type="Self.Documento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Documento">
+        <PropertyRef Name="ModifiedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Documento_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Documento" Type="Self.Documento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Documento">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inconsistencia_Documento">
+    <End Role="Documento" Type="Self.Documento" Multiplicity="1" />
+    <End Role="Inconsistencia" Type="Self.Inconsistencia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Documento">
+        <PropertyRef Name="DocumentoId" />
+      </Principal>
+      <Dependent Role="Inconsistencia">
+        <PropertyRef Name="Documento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GrupoPersona_ModifiedBy">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="GrupoPersona" Type="Self.GrupoPersona" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="GrupoPersona">
+        <PropertyRef Name="ModifiedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GrupoPersona_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="GrupoPersona" Type="Self.GrupoPersona" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="GrupoPersona">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Proveedor_GrupoPersona">
+    <End Role="GrupoPersona" Type="Self.GrupoPersona" Multiplicity="1" />
+    <End Role="Proveedor" Type="Self.Proveedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GrupoPersona">
+        <PropertyRef Name="GrupoPersonaId" />
+      </Principal>
+      <Dependent Role="Proveedor">
+        <PropertyRef Name="GrupoPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inconsistencia_Modifiedby">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Inconsistencia" Type="Self.Inconsistencia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Inconsistencia">
+        <PropertyRef Name="ModifiedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inconsistencia_Proveedor">
+    <End Role="Proveedor" Type="Self.Proveedor" Multiplicity="1" />
+    <End Role="Inconsistencia" Type="Self.Inconsistencia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedor">
+        <PropertyRef Name="ProveedorId" />
+      </Principal>
+      <Dependent Role="Inconsistencia">
+        <PropertyRef Name="Proveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inconsistencia_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Inconsistencia" Type="Self.Inconsistencia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Inconsistencia">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LineaProducto_ModifiedBy">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="LineaProducto" Type="Self.LineaProducto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="LineaProducto">
+        <PropertyRef Name="ModifiedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LineaProducto_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="LineaProducto" Type="Self.LineaProducto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="LineaProducto">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SolicitudCredito_Moneda">
+    <End Role="Moneda" Type="Self.Moneda" Multiplicity="1" />
+    <End Role="SolicitudCredito" Type="Self.SolicitudCredito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Moneda">
+        <PropertyRef Name="MonedaId" />
+      </Principal>
+      <Dependent Role="SolicitudCredito">
+        <PropertyRef Name="Modeda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pais_ModifiedBy">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Pais" Type="Self.Pai" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Pais">
+        <PropertyRef Name="ModifiedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pais_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Pais" Type="Self.Pai" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Pais">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Proveedor_Pais">
+    <End Role="Pais" Type="Self.Pai" Multiplicity="1" />
+    <End Role="Proveedor" Type="Self.Proveedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pais">
+        <PropertyRef Name="PaisId" />
+      </Principal>
+      <Dependent Role="Proveedor">
+        <PropertyRef Name="Pais" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Proveedor_PaisO">
+    <End Role="Pais" Type="Self.Pai" Multiplicity="1" />
+    <End Role="Proveedor" Type="Self.Proveedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pais">
+        <PropertyRef Name="PaisId" />
+      </Principal>
+      <Dependent Role="Proveedor">
+        <PropertyRef Name="PaisOperacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Privilegios_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Privilegios" Type="Self.Privilegio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Privilegios">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Privilegios_UsuarioM">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Privilegios" Type="Self.Privilegio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Privilegios">
+        <PropertyRef Name="ModifiedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rol_Privilegio_Privilegios">
+    <End Role="Privilegios" Type="Self.Privilegio" Multiplicity="1" />
+    <End Role="Rol_Privilegio" Type="Self.Rol_Privilegio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Privilegios">
+        <PropertyRef Name="PrivilegiosId" />
+      </Principal>
+      <Dependent Role="Rol_Privilegio">
+        <PropertyRef Name="PrivilegioId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Proveedor_Segmento">
+    <End Role="Segmento" Type="Self.Segmento" Multiplicity="1" />
+    <End Role="Proveedor" Type="Self.Proveedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Segmento">
+        <PropertyRef Name="SegmentoId" />
+      </Principal>
+      <Dependent Role="Proveedor">
+        <PropertyRef Name="Segmento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Proveedor_TipoFiscal">
+    <End Role="TipoFiscal" Type="Self.TipoFiscal" Multiplicity="1" />
+    <End Role="Proveedor" Type="Self.Proveedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoFiscal">
+        <PropertyRef Name="TipoFiscalId" />
+      </Principal>
+      <Dependent Role="Proveedor">
+        <PropertyRef Name="TipoIdentificador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Proveedor_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Proveedor" Type="Self.Proveedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Proveedor">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Proveedor_UsuarioM">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Proveedor" Type="Self.Proveedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Proveedor">
+        <PropertyRef Name="ModifiedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rol_Privilegio_Rol">
+    <End Role="Rol" Type="Self.Rol" Multiplicity="1" />
+    <End Role="Rol_Privilegio" Type="Self.Rol_Privilegio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rol">
+        <PropertyRef Name="RolId" />
+      </Principal>
+      <Dependent Role="Rol_Privilegio">
+        <PropertyRef Name="RolId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rol_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Rol" Type="Self.Rol" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Rol">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rol_UsuarioM">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Rol" Type="Self.Rol" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Rol">
+        <PropertyRef Name="ModifiedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Rol_Rol">
+    <End Role="Rol" Type="Self.Rol" Multiplicity="1" />
+    <End Role="User_Rol" Type="Self.User_Rol" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rol">
+        <PropertyRef Name="RolId" />
+      </Principal>
+      <Dependent Role="User_Rol">
+        <PropertyRef Name="RolId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rol_Privilegio_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Rol_Privilegio" Type="Self.Rol_Privilegio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Rol_Privilegio">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rol_Privilegio_UsuarioM">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Rol_Privilegio" Type="Self.Rol_Privilegio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Rol_Privilegio">
+        <PropertyRef Name="ModifiedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Segmento_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Segmento" Type="Self.Segmento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Segmento">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Segmento_UsuarioM">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Segmento" Type="Self.Segmento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Segmento">
+        <PropertyRef Name="ModifiedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SolicitudCredito_TipoPago">
+    <End Role="TipoPago" Type="Self.TipoPago" Multiplicity="1" />
+    <End Role="SolicitudCredito" Type="Self.SolicitudCredito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoPago">
+        <PropertyRef Name="TipoPagoId" />
+      </Principal>
+      <Dependent Role="SolicitudCredito">
+        <PropertyRef Name="TipoPago" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SolicitudCredito_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="SolicitudCredito" Type="Self.SolicitudCredito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="SolicitudCredito">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SolicitudCredito_Usuario1">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="SolicitudCredito" Type="Self.SolicitudCredito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="SolicitudCredito">
+        <PropertyRef Name="ModifiedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipoFiscal_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="TipoFiscal" Type="Self.TipoFiscal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="TipoFiscal">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipoIndustria_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="TipoIndustria" Type="Self.TipoIndustria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="TipoIndustria">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TipoIndustria_UsuarioM">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="TipoIndustria" Type="Self.TipoIndustria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="TipoIndustria">
+        <PropertyRef Name="ModifiedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Rol_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="User_Rol" Type="Self.User_Rol" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="User_Rol">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Rol_UsuarioC">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="User_Rol" Type="Self.User_Rol" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="User_Rol">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Rol_UsuarioM">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="User_Rol" Type="Self.User_Rol" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="User_Rol">
+        <PropertyRef Name="ModifiedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_CreatedBy">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Usuario1" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Usuario1">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_ModifiedBy">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Usuario1" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Usuario1">
+        <PropertyRef Name="ModifiedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ProcesoLogisticoEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Categorias" EntityType="Self.Categoria" />
+    <EntitySet Name="Clientes" EntityType="Self.Cliente" />
+    <EntitySet Name="CodigoSaps" EntityType="Self.CodigoSap" />
+    <EntitySet Name="Contactoes" EntityType="Self.Contacto" />
+    <EntitySet Name="Documentoes" EntityType="Self.Documento" />
+    <EntitySet Name="Financiamientoes" EntityType="Self.Financiamiento" />
+    <EntitySet Name="GrupoPersonas" EntityType="Self.GrupoPersona" />
+    <EntitySet Name="Inconsistencias" EntityType="Self.Inconsistencia" />
+    <EntitySet Name="LineaProductoes" EntityType="Self.LineaProducto" />
+    <EntitySet Name="Monedas" EntityType="Self.Moneda" />
+    <EntitySet Name="Pais" EntityType="Self.Pai" />
+    <EntitySet Name="Privilegios" EntityType="Self.Privilegio" />
+    <EntitySet Name="Proveedors" EntityType="Self.Proveedor" />
+    <EntitySet Name="Rols" EntityType="Self.Rol" />
+    <EntitySet Name="Rol_Privilegio" EntityType="Self.Rol_Privilegio" />
+    <EntitySet Name="Segmentoes" EntityType="Self.Segmento" />
+    <EntitySet Name="SolicitudCreditoes" EntityType="Self.SolicitudCredito" />
+    <EntitySet Name="TipoFiscals" EntityType="Self.TipoFiscal" />
+    <EntitySet Name="TipoIndustrias" EntityType="Self.TipoIndustria" />
+    <EntitySet Name="TipoPagoes" EntityType="Self.TipoPago" />
+    <EntitySet Name="User_Rol" EntityType="Self.User_Rol" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuario" />
+    <AssociationSet Name="FK_Categoria_CreatedBy" Association="Self.FK_Categoria_CreatedBy">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Categoria" EntitySet="Categorias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Categoria_Usuario" Association="Self.FK_Categoria_Usuario">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Categoria" EntitySet="Categorias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inconsistencia_Categoria" Association="Self.FK_Inconsistencia_Categoria">
+      <End Role="Categoria" EntitySet="Categorias" />
+      <End Role="Inconsistencia" EntitySet="Inconsistencias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cliente_Mercado" Association="Self.FK_Cliente_Mercado">
+      <End Role="Pais" EntitySet="Pais" />
+      <End Role="Cliente" EntitySet="Clientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cliente_Pais" Association="Self.FK_Cliente_Pais">
+      <End Role="Pais" EntitySet="Pais" />
+      <End Role="Cliente" EntitySet="Clientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cliente_PaisFacturacion" Association="Self.FK_Cliente_PaisFacturacion">
+      <End Role="Pais" EntitySet="Pais" />
+      <End Role="Cliente" EntitySet="Clientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cliente_TipoIndustria" Association="Self.FK_Cliente_TipoIndustria">
+      <End Role="TipoIndustria" EntitySet="TipoIndustrias" />
+      <End Role="Cliente" EntitySet="Clientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cliente_TipoRegistro" Association="Self.FK_Cliente_TipoRegistro">
+      <End Role="TipoFiscal" EntitySet="TipoFiscals" />
+      <End Role="Cliente" EntitySet="Clientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cliente_Usuario" Association="Self.FK_Cliente_Usuario">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Cliente" EntitySet="Clientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cliente_UsuarioModify" Association="Self.FK_Cliente_UsuarioModify">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Cliente" EntitySet="Clientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Contacto_Cliente" Association="Self.FK_Contacto_Cliente">
+      <End Role="Cliente" EntitySet="Clientes" />
+      <End Role="Contacto" EntitySet="Contactoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inconsistencia_Cliente" Association="Self.FK_Inconsistencia_Cliente">
+      <End Role="Cliente" EntitySet="Clientes" />
+      <End Role="Inconsistencia" EntitySet="Inconsistencias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Proveedor_Cliente" Association="Self.FK_Proveedor_Cliente">
+      <End Role="Cliente" EntitySet="Clientes" />
+      <End Role="Proveedor" EntitySet="Proveedors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SolicitudCredito_Cliente" Association="Self.FK_SolicitudCredito_Cliente">
+      <End Role="Cliente" EntitySet="Clientes" />
+      <End Role="SolicitudCredito" EntitySet="SolicitudCreditoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CodigoSap_ModifiedBy" Association="Self.FK_CodigoSap_ModifiedBy">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="CodigoSap" EntitySet="CodigoSaps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CodigoSap_Usuario" Association="Self.FK_CodigoSap_Usuario">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="CodigoSap" EntitySet="CodigoSaps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Contacto_Modified" Association="Self.FK_Contacto_Modified">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Contacto" EntitySet="Contactoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Contacto_Usuario" Association="Self.FK_Contacto_Usuario">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Contacto" EntitySet="Contactoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Documento_ModifiedBy" Association="Self.FK_Documento_ModifiedBy">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Documento" EntitySet="Documentoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Documento_Usuario" Association="Self.FK_Documento_Usuario">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Documento" EntitySet="Documentoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inconsistencia_Documento" Association="Self.FK_Inconsistencia_Documento">
+      <End Role="Documento" EntitySet="Documentoes" />
+      <End Role="Inconsistencia" EntitySet="Inconsistencias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GrupoPersona_ModifiedBy" Association="Self.FK_GrupoPersona_ModifiedBy">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="GrupoPersona" EntitySet="GrupoPersonas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GrupoPersona_Usuario" Association="Self.FK_GrupoPersona_Usuario">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="GrupoPersona" EntitySet="GrupoPersonas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Proveedor_GrupoPersona" Association="Self.FK_Proveedor_GrupoPersona">
+      <End Role="GrupoPersona" EntitySet="GrupoPersonas" />
+      <End Role="Proveedor" EntitySet="Proveedors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inconsistencia_Modifiedby" Association="Self.FK_Inconsistencia_Modifiedby">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Inconsistencia" EntitySet="Inconsistencias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inconsistencia_Proveedor" Association="Self.FK_Inconsistencia_Proveedor">
+      <End Role="Proveedor" EntitySet="Proveedors" />
+      <End Role="Inconsistencia" EntitySet="Inconsistencias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inconsistencia_Usuario" Association="Self.FK_Inconsistencia_Usuario">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Inconsistencia" EntitySet="Inconsistencias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LineaProducto_ModifiedBy" Association="Self.FK_LineaProducto_ModifiedBy">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="LineaProducto" EntitySet="LineaProductoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LineaProducto_Usuario" Association="Self.FK_LineaProducto_Usuario">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="LineaProducto" EntitySet="LineaProductoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SolicitudCredito_Moneda" Association="Self.FK_SolicitudCredito_Moneda">
+      <End Role="Moneda" EntitySet="Monedas" />
+      <End Role="SolicitudCredito" EntitySet="SolicitudCreditoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pais_ModifiedBy" Association="Self.FK_Pais_ModifiedBy">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Pais" EntitySet="Pais" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pais_Usuario" Association="Self.FK_Pais_Usuario">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Pais" EntitySet="Pais" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Proveedor_Pais" Association="Self.FK_Proveedor_Pais">
+      <End Role="Pais" EntitySet="Pais" />
+      <End Role="Proveedor" EntitySet="Proveedors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Proveedor_PaisO" Association="Self.FK_Proveedor_PaisO">
+      <End Role="Pais" EntitySet="Pais" />
+      <End Role="Proveedor" EntitySet="Proveedors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Privilegios_Usuario" Association="Self.FK_Privilegios_Usuario">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Privilegios" EntitySet="Privilegios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Privilegios_UsuarioM" Association="Self.FK_Privilegios_UsuarioM">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Privilegios" EntitySet="Privilegios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rol_Privilegio_Privilegios" Association="Self.FK_Rol_Privilegio_Privilegios">
+      <End Role="Privilegios" EntitySet="Privilegios" />
+      <End Role="Rol_Privilegio" EntitySet="Rol_Privilegio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Proveedor_Segmento" Association="Self.FK_Proveedor_Segmento">
+      <End Role="Segmento" EntitySet="Segmentoes" />
+      <End Role="Proveedor" EntitySet="Proveedors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Proveedor_TipoFiscal" Association="Self.FK_Proveedor_TipoFiscal">
+      <End Role="TipoFiscal" EntitySet="TipoFiscals" />
+      <End Role="Proveedor" EntitySet="Proveedors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Proveedor_Usuario" Association="Self.FK_Proveedor_Usuario">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Proveedor" EntitySet="Proveedors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Proveedor_UsuarioM" Association="Self.FK_Proveedor_UsuarioM">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Proveedor" EntitySet="Proveedors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rol_Privilegio_Rol" Association="Self.FK_Rol_Privilegio_Rol">
+      <End Role="Rol" EntitySet="Rols" />
+      <End Role="Rol_Privilegio" EntitySet="Rol_Privilegio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rol_Usuario" Association="Self.FK_Rol_Usuario">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Rol" EntitySet="Rols" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rol_UsuarioM" Association="Self.FK_Rol_UsuarioM">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Rol" EntitySet="Rols" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Rol_Rol" Association="Self.FK_User_Rol_Rol">
+      <End Role="Rol" EntitySet="Rols" />
+      <End Role="User_Rol" EntitySet="User_Rol" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rol_Privilegio_Usuario" Association="Self.FK_Rol_Privilegio_Usuario">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Rol_Privilegio" EntitySet="Rol_Privilegio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rol_Privilegio_UsuarioM" Association="Self.FK_Rol_Privilegio_UsuarioM">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Rol_Privilegio" EntitySet="Rol_Privilegio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Segmento_Usuario" Association="Self.FK_Segmento_Usuario">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Segmento" EntitySet="Segmentoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Segmento_UsuarioM" Association="Self.FK_Segmento_UsuarioM">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Segmento" EntitySet="Segmentoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SolicitudCredito_TipoPago" Association="Self.FK_SolicitudCredito_TipoPago">
+      <End Role="TipoPago" EntitySet="TipoPagoes" />
+      <End Role="SolicitudCredito" EntitySet="SolicitudCreditoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SolicitudCredito_Usuario" Association="Self.FK_SolicitudCredito_Usuario">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="SolicitudCredito" EntitySet="SolicitudCreditoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SolicitudCredito_Usuario1" Association="Self.FK_SolicitudCredito_Usuario1">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="SolicitudCredito" EntitySet="SolicitudCreditoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipoFiscal_Usuario" Association="Self.FK_TipoFiscal_Usuario">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="TipoFiscal" EntitySet="TipoFiscals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipoIndustria_Usuario" Association="Self.FK_TipoIndustria_Usuario">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="TipoIndustria" EntitySet="TipoIndustrias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TipoIndustria_UsuarioM" Association="Self.FK_TipoIndustria_UsuarioM">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="TipoIndustria" EntitySet="TipoIndustrias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Rol_Usuario" Association="Self.FK_User_Rol_Usuario">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="User_Rol" EntitySet="User_Rol" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Rol_UsuarioC" Association="Self.FK_User_Rol_UsuarioC">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="User_Rol" EntitySet="User_Rol" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Rol_UsuarioM" Association="Self.FK_User_Rol_UsuarioM">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="User_Rol" EntitySet="User_Rol" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_CreatedBy" Association="Self.FK_User_CreatedBy">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Usuario1" EntitySet="Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_ModifiedBy" Association="Self.FK_User_ModifiedBy">
+      <End Role="Usuario" EntitySet="Usuarios" />
+      <End Role="Usuario1" EntitySet="Usuarios" />
+    </AssociationSet>
+    <FunctionImport Name="SP_USUARIO_INSERT">
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="Password" Mode="In" Type="String" />
+      <Parameter Name="FirstName" Mode="In" Type="String" />
+      <Parameter Name="LastName" Mode="In" Type="String" />
+      <Parameter Name="CreatedDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ModifiedDate" Mode="In" Type="DateTime" />
+      <Parameter Name="CreatedBy" Mode="In" Type="Int32" />
+      <Parameter Name="ModifiedBy" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <AssociationSet Name="FK_Cliente_LineaProducto" Association="ProcesoLogisticoModel.FK_Cliente_LineaProducto">
+      <End Role="LineaProducto" EntitySet="LineaProductoes" />
+      <End Role="Cliente" EntitySet="Clientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cliente_Segmento" Association="ProcesoLogisticoModel.FK_Cliente_Segmento">
+      <End Role="Segmento" EntitySet="Segmentoes" />
+      <End Role="Cliente" EntitySet="Clientes" />
+    </AssociationSet>
+  </EntityContainer>
+  <Association Name="FK_Cliente_LineaProducto">
+    <End Type="ProcesoLogisticoModel.LineaProducto" Role="LineaProducto" Multiplicity="1" />
+    <End Type="ProcesoLogisticoModel.Cliente" Role="Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LineaProducto">
+        <PropertyRef Name="LineaProductoId" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="LineaProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cliente_Segmento">
+    <End Type="ProcesoLogisticoModel.Segmento" Role="Segmento" Multiplicity="1" />
+    <End Type="ProcesoLogisticoModel.Cliente" Role="Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Segmento">
+        <PropertyRef Name="SegmentoId" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="Segmento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

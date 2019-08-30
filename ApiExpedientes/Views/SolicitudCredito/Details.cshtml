@@ -1,0 +1,138 @@
+﻿@model ApiExpedientes.Models.SolicitudCredito
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SolicitudCredito</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TramitesMensualesEsperados)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TramitesMensualesEsperados)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProyeccionCM1Mensual)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProyeccionCM1Mensual)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProyeccionVolumenMensual)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProyeccionVolumenMensual)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MontoSolicitado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MontoSolicitado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TiempoCredito)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TiempoCredito)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Division)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Division)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FinanciamientoImpuestos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FinanciamientoImpuestos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TiempoCreditoImpuesto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TiempoCreditoImpuesto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente1.GrupoEmpresarial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente1.GrupoEmpresarial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Moneda.Moneda1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Moneda.Moneda1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoPago1.TipoPago1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoPago1.TipoPago1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario1.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario1.UserName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

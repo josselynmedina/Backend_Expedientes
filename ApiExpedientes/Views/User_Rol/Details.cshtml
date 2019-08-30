@@ -1,0 +1,66 @@
+﻿@model ApiExpedientes.Models.User_Rol
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>User_Rol</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rol.RolDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rol.RolDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario1.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario1.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario2.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario2.UserName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

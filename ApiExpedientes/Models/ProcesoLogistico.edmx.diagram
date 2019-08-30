@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d5668067f86e4bf99ad3ada350221d41" Name="Diagram1">
+        <EntityTypeShape EntityType="ProcesoLogisticoModel.Categoria" Width="1.5" PointX="3" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProcesoLogisticoModel.Cliente" Width="1.5" PointX="5.25" PointY="39.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProcesoLogisticoModel.CodigoSap" Width="1.5" PointX="3" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProcesoLogisticoModel.Contacto" Width="1.5" PointX="7.5" PointY="33" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProcesoLogisticoModel.Documento" Width="1.5" PointX="3" PointY="28" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProcesoLogisticoModel.Financiamiento" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProcesoLogisticoModel.GrupoPersona" Width="1.5" PointX="3" PointY="31.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProcesoLogisticoModel.Inconsistencia" Width="1.5" PointX="5.25" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProcesoLogisticoModel.LineaProducto" Width="1.5" PointX="3" PointY="35" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProcesoLogisticoModel.Moneda" Width="1.5" PointX="8.25" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProcesoLogisticoModel.Pai" Width="1.5" PointX="3" PointY="38.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProcesoLogisticoModel.Privilegio" Width="1.5" PointX="3" PointY="42.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProcesoLogisticoModel.Proveedor" Width="1.5" PointX="7.5" PointY="41.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProcesoLogisticoModel.Rol" Width="1.5" PointX="3" PointY="46.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProcesoLogisticoModel.Rol_Privilegio" Width="1.5" PointX="5.25" PointY="35.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProcesoLogisticoModel.Segmento" Width="1.5" PointX="3" PointY="49.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProcesoLogisticoModel.SolicitudCredito" Width="1.5" PointX="10.5" PointY="34.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProcesoLogisticoModel.TipoFiscal" Width="1.5" PointX="3" PointY="53.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProcesoLogisticoModel.TipoIndustria" Width="1.5" PointX="3" PointY="56.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProcesoLogisticoModel.TipoPago" Width="1.5" PointX="8.25" PointY="27.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProcesoLogisticoModel.User_Rol" Width="1.5" PointX="8.25" PointY="37.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProcesoLogisticoModel.Usuario" Width="1.5" PointX="0.75" PointY="26.625" IsExpanded="true" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Categoria_CreatedBy" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Categoria_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Inconsistencia_Categoria" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Cliente_Mercado" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Cliente_Pais" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Cliente_PaisFacturacion" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Cliente_TipoIndustria" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Cliente_TipoRegistro" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Cliente_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Cliente_UsuarioModify" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Contacto_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Inconsistencia_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Proveedor_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_SolicitudCredito_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_CodigoSap_ModifiedBy" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_CodigoSap_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Contacto_Modified" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Contacto_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Documento_ModifiedBy" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Documento_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Inconsistencia_Documento" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_GrupoPersona_ModifiedBy" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_GrupoPersona_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Proveedor_GrupoPersona" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Inconsistencia_Modifiedby" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Inconsistencia_Proveedor" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Inconsistencia_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_LineaProducto_ModifiedBy" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_LineaProducto_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_SolicitudCredito_Moneda" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Pais_ModifiedBy" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Pais_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Proveedor_Pais" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Proveedor_PaisO" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Privilegios_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Privilegios_UsuarioM" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Rol_Privilegio_Privilegios" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Proveedor_Segmento" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Proveedor_TipoFiscal" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Proveedor_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Proveedor_UsuarioM" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Rol_Privilegio_Rol" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Rol_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Rol_UsuarioM" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_User_Rol_Rol" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Rol_Privilegio_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Rol_Privilegio_UsuarioM" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Segmento_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Segmento_UsuarioM" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_SolicitudCredito_TipoPago" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_SolicitudCredito_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_SolicitudCredito_Usuario1" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_TipoFiscal_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_TipoIndustria_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_TipoIndustria_UsuarioM" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_User_Rol_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_User_Rol_UsuarioC" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_User_Rol_UsuarioM" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_User_CreatedBy" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_User_ModifiedBy" ManuallyRouted="false" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Cliente_LineaProducto" />
+        <AssociationConnector Association="ProcesoLogisticoModel.FK_Cliente_Segmento" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,114 @@
+﻿@model ApiExpedientes.Models.Proveedor
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Proveedor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Proveedor1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Proveedor1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdentificadorFiscal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdentificadorFiscal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente1.GrupoEmpresarial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente1.GrupoEmpresarial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GrupoPersona1.GrupoPersona1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GrupoPersona1.GrupoPersona1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pai.Pais)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pai.Pais)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pai1.Pais)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pai1.Pais)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Segmento1.Segmento1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Segmento1.Segmento1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoFiscal.TipoFiscal1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoFiscal.TipoFiscal1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario1.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario1.UserName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProveedorId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

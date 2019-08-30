@@ -1,0 +1,117 @@
+﻿@model IEnumerable<ApiExpedientes.Models.SolicitudCredito>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TramitesMensualesEsperados)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProyeccionCM1Mensual)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProyeccionVolumenMensual)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MontoSolicitado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TiempoCredito)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Division)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FinanciamientoImpuestos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TiempoCreditoImpuesto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModifiedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cliente1.GrupoEmpresarial)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Moneda.Moneda1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoPago1.TipoPago1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuario.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuario1.UserName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TramitesMensualesEsperados)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProyeccionCM1Mensual)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProyeccionVolumenMensual)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MontoSolicitado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TiempoCredito)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Division)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FinanciamientoImpuestos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TiempoCreditoImpuesto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModifiedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cliente1.GrupoEmpresarial)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Moneda.Moneda1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoPago1.TipoPago1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuario.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuario1.UserName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
