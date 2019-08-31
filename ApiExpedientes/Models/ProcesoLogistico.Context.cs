@@ -86,5 +86,605 @@ namespace ApiExpedientes.Models
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_USUARIO_INSERT", userNameParameter, passwordParameter, firstNameParameter, lastNameParameter, createdDateParameter, modifiedDateParameter, createdByParameter, modifiedByParameter);
         }
+    
+        public virtual int SP_CATEGORIA_CREATE(string categoria)
+        {
+            var categoriaParameter = categoria != null ?
+                new ObjectParameter("Categoria", categoria) :
+                new ObjectParameter("Categoria", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_CATEGORIA_CREATE", categoriaParameter);
+        }
+    
+        public virtual int SP_CATEGORIA_DELETE(Nullable<int> categoriaId)
+        {
+            var categoriaIdParameter = categoriaId.HasValue ?
+                new ObjectParameter("CategoriaId", categoriaId) :
+                new ObjectParameter("CategoriaId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_CATEGORIA_DELETE", categoriaIdParameter);
+        }
+    
+        public virtual ObjectResult<SP_CATEGORIA_SELECT_ALL_Result> SP_CATEGORIA_SELECT_ALL()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_CATEGORIA_SELECT_ALL_Result>("SP_CATEGORIA_SELECT_ALL");
+        }
+    
+        public virtual int SP_CATEGORIA_UPDATE(Nullable<int> categoriaId, string categoria)
+        {
+            var categoriaIdParameter = categoriaId.HasValue ?
+                new ObjectParameter("CategoriaId", categoriaId) :
+                new ObjectParameter("CategoriaId", typeof(int));
+    
+            var categoriaParameter = categoria != null ?
+                new ObjectParameter("Categoria", categoria) :
+                new ObjectParameter("Categoria", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_CATEGORIA_UPDATE", categoriaIdParameter, categoriaParameter);
+        }
+    
+        public virtual int SP_CLIENTE_CREATE(string grupoEmpresarial, string registroTributario, Nullable<int> tipoRegistro, string direccion, string webPage, string actividad, Nullable<int> lineaProducto, string vision, string mision, string valores, string pais, string telefono, string industria, Nullable<int> tipoIndustria, Nullable<int> segmento, string rSE, string marcas, Nullable<int> mercado, Nullable<int> paisFacturacion)
+        {
+            var grupoEmpresarialParameter = grupoEmpresarial != null ?
+                new ObjectParameter("GrupoEmpresarial", grupoEmpresarial) :
+                new ObjectParameter("GrupoEmpresarial", typeof(string));
+    
+            var registroTributarioParameter = registroTributario != null ?
+                new ObjectParameter("RegistroTributario", registroTributario) :
+                new ObjectParameter("RegistroTributario", typeof(string));
+    
+            var tipoRegistroParameter = tipoRegistro.HasValue ?
+                new ObjectParameter("TipoRegistro", tipoRegistro) :
+                new ObjectParameter("TipoRegistro", typeof(int));
+    
+            var direccionParameter = direccion != null ?
+                new ObjectParameter("Direccion", direccion) :
+                new ObjectParameter("Direccion", typeof(string));
+    
+            var webPageParameter = webPage != null ?
+                new ObjectParameter("WebPage", webPage) :
+                new ObjectParameter("WebPage", typeof(string));
+    
+            var actividadParameter = actividad != null ?
+                new ObjectParameter("Actividad", actividad) :
+                new ObjectParameter("Actividad", typeof(string));
+    
+            var lineaProductoParameter = lineaProducto.HasValue ?
+                new ObjectParameter("LineaProducto", lineaProducto) :
+                new ObjectParameter("LineaProducto", typeof(int));
+    
+            var visionParameter = vision != null ?
+                new ObjectParameter("Vision", vision) :
+                new ObjectParameter("Vision", typeof(string));
+    
+            var misionParameter = mision != null ?
+                new ObjectParameter("Mision", mision) :
+                new ObjectParameter("Mision", typeof(string));
+    
+            var valoresParameter = valores != null ?
+                new ObjectParameter("Valores", valores) :
+                new ObjectParameter("Valores", typeof(string));
+    
+            var paisParameter = pais != null ?
+                new ObjectParameter("Pais", pais) :
+                new ObjectParameter("Pais", typeof(string));
+    
+            var telefonoParameter = telefono != null ?
+                new ObjectParameter("Telefono", telefono) :
+                new ObjectParameter("Telefono", typeof(string));
+    
+            var industriaParameter = industria != null ?
+                new ObjectParameter("Industria", industria) :
+                new ObjectParameter("Industria", typeof(string));
+    
+            var tipoIndustriaParameter = tipoIndustria.HasValue ?
+                new ObjectParameter("TipoIndustria", tipoIndustria) :
+                new ObjectParameter("TipoIndustria", typeof(int));
+    
+            var segmentoParameter = segmento.HasValue ?
+                new ObjectParameter("Segmento", segmento) :
+                new ObjectParameter("Segmento", typeof(int));
+    
+            var rSEParameter = rSE != null ?
+                new ObjectParameter("RSE", rSE) :
+                new ObjectParameter("RSE", typeof(string));
+    
+            var marcasParameter = marcas != null ?
+                new ObjectParameter("Marcas", marcas) :
+                new ObjectParameter("Marcas", typeof(string));
+    
+            var mercadoParameter = mercado.HasValue ?
+                new ObjectParameter("Mercado", mercado) :
+                new ObjectParameter("Mercado", typeof(int));
+    
+            var paisFacturacionParameter = paisFacturacion.HasValue ?
+                new ObjectParameter("PaisFacturacion", paisFacturacion) :
+                new ObjectParameter("PaisFacturacion", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_CLIENTE_CREATE", grupoEmpresarialParameter, registroTributarioParameter, tipoRegistroParameter, direccionParameter, webPageParameter, actividadParameter, lineaProductoParameter, visionParameter, misionParameter, valoresParameter, paisParameter, telefonoParameter, industriaParameter, tipoIndustriaParameter, segmentoParameter, rSEParameter, marcasParameter, mercadoParameter, paisFacturacionParameter);
+        }
+    
+        public virtual int SP_CLIENTE_DELETE(Nullable<int> clientId)
+        {
+            var clientIdParameter = clientId.HasValue ?
+                new ObjectParameter("ClientId", clientId) :
+                new ObjectParameter("ClientId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_CLIENTE_DELETE", clientIdParameter);
+        }
+    
+        public virtual ObjectResult<SP_CLIENTE_SELECT_ALL_Result> SP_CLIENTE_SELECT_ALL()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_CLIENTE_SELECT_ALL_Result>("SP_CLIENTE_SELECT_ALL");
+        }
+    
+        public virtual int SP_CLIENTE_UPDATE(Nullable<int> clientId, string grupoEmpresarial, string registroTributario, Nullable<int> tipoRegistro, string direccion, string webPage, string actividad, Nullable<int> lineaProducto, string vision, string mision, string valores, string pais, string telefono, string industria, Nullable<int> tipoIndustria, Nullable<int> segmento, string rSE, string marcas, Nullable<int> mercado, Nullable<int> paisFacturacion)
+        {
+            var clientIdParameter = clientId.HasValue ?
+                new ObjectParameter("ClientId", clientId) :
+                new ObjectParameter("ClientId", typeof(int));
+    
+            var grupoEmpresarialParameter = grupoEmpresarial != null ?
+                new ObjectParameter("GrupoEmpresarial", grupoEmpresarial) :
+                new ObjectParameter("GrupoEmpresarial", typeof(string));
+    
+            var registroTributarioParameter = registroTributario != null ?
+                new ObjectParameter("RegistroTributario", registroTributario) :
+                new ObjectParameter("RegistroTributario", typeof(string));
+    
+            var tipoRegistroParameter = tipoRegistro.HasValue ?
+                new ObjectParameter("TipoRegistro", tipoRegistro) :
+                new ObjectParameter("TipoRegistro", typeof(int));
+    
+            var direccionParameter = direccion != null ?
+                new ObjectParameter("Direccion", direccion) :
+                new ObjectParameter("Direccion", typeof(string));
+    
+            var webPageParameter = webPage != null ?
+                new ObjectParameter("WebPage", webPage) :
+                new ObjectParameter("WebPage", typeof(string));
+    
+            var actividadParameter = actividad != null ?
+                new ObjectParameter("Actividad", actividad) :
+                new ObjectParameter("Actividad", typeof(string));
+    
+            var lineaProductoParameter = lineaProducto.HasValue ?
+                new ObjectParameter("LineaProducto", lineaProducto) :
+                new ObjectParameter("LineaProducto", typeof(int));
+    
+            var visionParameter = vision != null ?
+                new ObjectParameter("Vision", vision) :
+                new ObjectParameter("Vision", typeof(string));
+    
+            var misionParameter = mision != null ?
+                new ObjectParameter("Mision", mision) :
+                new ObjectParameter("Mision", typeof(string));
+    
+            var valoresParameter = valores != null ?
+                new ObjectParameter("Valores", valores) :
+                new ObjectParameter("Valores", typeof(string));
+    
+            var paisParameter = pais != null ?
+                new ObjectParameter("Pais", pais) :
+                new ObjectParameter("Pais", typeof(string));
+    
+            var telefonoParameter = telefono != null ?
+                new ObjectParameter("Telefono", telefono) :
+                new ObjectParameter("Telefono", typeof(string));
+    
+            var industriaParameter = industria != null ?
+                new ObjectParameter("Industria", industria) :
+                new ObjectParameter("Industria", typeof(string));
+    
+            var tipoIndustriaParameter = tipoIndustria.HasValue ?
+                new ObjectParameter("TipoIndustria", tipoIndustria) :
+                new ObjectParameter("TipoIndustria", typeof(int));
+    
+            var segmentoParameter = segmento.HasValue ?
+                new ObjectParameter("Segmento", segmento) :
+                new ObjectParameter("Segmento", typeof(int));
+    
+            var rSEParameter = rSE != null ?
+                new ObjectParameter("RSE", rSE) :
+                new ObjectParameter("RSE", typeof(string));
+    
+            var marcasParameter = marcas != null ?
+                new ObjectParameter("Marcas", marcas) :
+                new ObjectParameter("Marcas", typeof(string));
+    
+            var mercadoParameter = mercado.HasValue ?
+                new ObjectParameter("Mercado", mercado) :
+                new ObjectParameter("Mercado", typeof(int));
+    
+            var paisFacturacionParameter = paisFacturacion.HasValue ?
+                new ObjectParameter("PaisFacturacion", paisFacturacion) :
+                new ObjectParameter("PaisFacturacion", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_CLIENTE_UPDATE", clientIdParameter, grupoEmpresarialParameter, registroTributarioParameter, tipoRegistroParameter, direccionParameter, webPageParameter, actividadParameter, lineaProductoParameter, visionParameter, misionParameter, valoresParameter, paisParameter, telefonoParameter, industriaParameter, tipoIndustriaParameter, segmentoParameter, rSEParameter, marcasParameter, mercadoParameter, paisFacturacionParameter);
+        }
+    
+        public virtual int SP_CODIGOSAP_CREATE(string codigoSap)
+        {
+            var codigoSapParameter = codigoSap != null ?
+                new ObjectParameter("CodigoSap", codigoSap) :
+                new ObjectParameter("CodigoSap", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_CODIGOSAP_CREATE", codigoSapParameter);
+        }
+    
+        public virtual int SP_CODIGOSAP_DELETE(Nullable<int> codigoSapId)
+        {
+            var codigoSapIdParameter = codigoSapId.HasValue ?
+                new ObjectParameter("CodigoSapId", codigoSapId) :
+                new ObjectParameter("CodigoSapId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_CODIGOSAP_DELETE", codigoSapIdParameter);
+        }
+    
+        public virtual ObjectResult<SP_CODIGOSAP_SELECT_ALL_Result> SP_CODIGOSAP_SELECT_ALL()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_CODIGOSAP_SELECT_ALL_Result>("SP_CODIGOSAP_SELECT_ALL");
+        }
+    
+        public virtual int SP_CODIGOSAP_UPDATE(Nullable<int> codigoSapId, string codigoSap)
+        {
+            var codigoSapIdParameter = codigoSapId.HasValue ?
+                new ObjectParameter("CodigoSapId", codigoSapId) :
+                new ObjectParameter("CodigoSapId", typeof(int));
+    
+            var codigoSapParameter = codigoSap != null ?
+                new ObjectParameter("CodigoSap", codigoSap) :
+                new ObjectParameter("CodigoSap", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_CODIGOSAP_UPDATE", codigoSapIdParameter, codigoSapParameter);
+        }
+    
+        public virtual int SP_DOCUMENTO_CREATE(string documento)
+        {
+            var documentoParameter = documento != null ?
+                new ObjectParameter("Documento", documento) :
+                new ObjectParameter("Documento", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_DOCUMENTO_CREATE", documentoParameter);
+        }
+    
+        public virtual int SP_DOCUMENTO_DELETE(Nullable<int> documentoId)
+        {
+            var documentoIdParameter = documentoId.HasValue ?
+                new ObjectParameter("DocumentoId", documentoId) :
+                new ObjectParameter("DocumentoId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_DOCUMENTO_DELETE", documentoIdParameter);
+        }
+    
+        public virtual ObjectResult<SP_DOCUMENTO_SELECT_ALL_Result> SP_DOCUMENTO_SELECT_ALL()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_DOCUMENTO_SELECT_ALL_Result>("SP_DOCUMENTO_SELECT_ALL");
+        }
+    
+        public virtual int SP_DOCUMENTO_UPDATE(Nullable<int> documentoId, string documento)
+        {
+            var documentoIdParameter = documentoId.HasValue ?
+                new ObjectParameter("DocumentoId", documentoId) :
+                new ObjectParameter("DocumentoId", typeof(int));
+    
+            var documentoParameter = documento != null ?
+                new ObjectParameter("Documento", documento) :
+                new ObjectParameter("Documento", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_DOCUMENTO_UPDATE", documentoIdParameter, documentoParameter);
+        }
+    
+        public virtual int SP_GRUPOPERSONA_CREATE(string grupoPersona)
+        {
+            var grupoPersonaParameter = grupoPersona != null ?
+                new ObjectParameter("GrupoPersona", grupoPersona) :
+                new ObjectParameter("GrupoPersona", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_GRUPOPERSONA_CREATE", grupoPersonaParameter);
+        }
+    
+        public virtual int SP_GRUPOPERSONA_DELETE(Nullable<int> grupoPersonaId)
+        {
+            var grupoPersonaIdParameter = grupoPersonaId.HasValue ?
+                new ObjectParameter("GrupoPersonaId", grupoPersonaId) :
+                new ObjectParameter("GrupoPersonaId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_GRUPOPERSONA_DELETE", grupoPersonaIdParameter);
+        }
+    
+        public virtual ObjectResult<SP_GRUPOPERSONA_SELECT_ALL_Result> SP_GRUPOPERSONA_SELECT_ALL()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_GRUPOPERSONA_SELECT_ALL_Result>("SP_GRUPOPERSONA_SELECT_ALL");
+        }
+    
+        public virtual int SP_GRUPOPERSONA_UPDATE(Nullable<int> grupoPersonaId, string grupoPersona)
+        {
+            var grupoPersonaIdParameter = grupoPersonaId.HasValue ?
+                new ObjectParameter("GrupoPersonaId", grupoPersonaId) :
+                new ObjectParameter("GrupoPersonaId", typeof(int));
+    
+            var grupoPersonaParameter = grupoPersona != null ?
+                new ObjectParameter("GrupoPersona", grupoPersona) :
+                new ObjectParameter("GrupoPersona", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_GRUPOPERSONA_UPDATE", grupoPersonaIdParameter, grupoPersonaParameter);
+        }
+    
+        public virtual int SP_LINEAPRODUCTO_CREATE(string lineaProducto)
+        {
+            var lineaProductoParameter = lineaProducto != null ?
+                new ObjectParameter("LineaProducto", lineaProducto) :
+                new ObjectParameter("LineaProducto", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_LINEAPRODUCTO_CREATE", lineaProductoParameter);
+        }
+    
+        public virtual int SP_LINEAPRODUCTO_DELETE(Nullable<int> lineaProductoId)
+        {
+            var lineaProductoIdParameter = lineaProductoId.HasValue ?
+                new ObjectParameter("LineaProductoId", lineaProductoId) :
+                new ObjectParameter("LineaProductoId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_LINEAPRODUCTO_DELETE", lineaProductoIdParameter);
+        }
+    
+        public virtual ObjectResult<SP_LINEAPRODUCTO_SELECT_ALL_Result> SP_LINEAPRODUCTO_SELECT_ALL()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_LINEAPRODUCTO_SELECT_ALL_Result>("SP_LINEAPRODUCTO_SELECT_ALL");
+        }
+    
+        public virtual int SP_LINEAPRODUCTO_UPDATE(Nullable<int> lineaProductoId, string lineaProducto)
+        {
+            var lineaProductoIdParameter = lineaProductoId.HasValue ?
+                new ObjectParameter("LineaProductoId", lineaProductoId) :
+                new ObjectParameter("LineaProductoId", typeof(int));
+    
+            var lineaProductoParameter = lineaProducto != null ?
+                new ObjectParameter("LineaProducto", lineaProducto) :
+                new ObjectParameter("LineaProducto", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_LINEAPRODUCTO_UPDATE", lineaProductoIdParameter, lineaProductoParameter);
+        }
+    
+        public virtual int SP_PRIVILEGIO_CREATE(string privilegio)
+        {
+            var privilegioParameter = privilegio != null ?
+                new ObjectParameter("Privilegio", privilegio) :
+                new ObjectParameter("Privilegio", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_PRIVILEGIO_CREATE", privilegioParameter);
+        }
+    
+        public virtual int SP_PRIVILEGIO_DELETE(Nullable<int> privilegioId)
+        {
+            var privilegioIdParameter = privilegioId.HasValue ?
+                new ObjectParameter("PrivilegioId", privilegioId) :
+                new ObjectParameter("PrivilegioId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_PRIVILEGIO_DELETE", privilegioIdParameter);
+        }
+    
+        public virtual ObjectResult<SP_PRIVILEGIO_SELECT_ALL_Result> SP_PRIVILEGIO_SELECT_ALL()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_PRIVILEGIO_SELECT_ALL_Result>("SP_PRIVILEGIO_SELECT_ALL");
+        }
+    
+        public virtual int SP_PRIVILEGIO_UPDATE(Nullable<int> privilegioId, string privilegio)
+        {
+            var privilegioIdParameter = privilegioId.HasValue ?
+                new ObjectParameter("PrivilegioId", privilegioId) :
+                new ObjectParameter("PrivilegioId", typeof(int));
+    
+            var privilegioParameter = privilegio != null ?
+                new ObjectParameter("Privilegio", privilegio) :
+                new ObjectParameter("Privilegio", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_PRIVILEGIO_UPDATE", privilegioIdParameter, privilegioParameter);
+        }
+    
+        public virtual int SP_ROL_CREATE(string rol)
+        {
+            var rolParameter = rol != null ?
+                new ObjectParameter("Rol", rol) :
+                new ObjectParameter("Rol", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_ROL_CREATE", rolParameter);
+        }
+    
+        public virtual int SP_ROL_DELETE(Nullable<int> rolId)
+        {
+            var rolIdParameter = rolId.HasValue ?
+                new ObjectParameter("RolId", rolId) :
+                new ObjectParameter("RolId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_ROL_DELETE", rolIdParameter);
+        }
+    
+        public virtual ObjectResult<SP_ROL_SELECT_ALL_Result> SP_ROL_SELECT_ALL()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_ROL_SELECT_ALL_Result>("SP_ROL_SELECT_ALL");
+        }
+    
+        public virtual int SP_ROL_UPDATE(Nullable<int> rolId, string rol)
+        {
+            var rolIdParameter = rolId.HasValue ?
+                new ObjectParameter("RolId", rolId) :
+                new ObjectParameter("RolId", typeof(int));
+    
+            var rolParameter = rol != null ?
+                new ObjectParameter("Rol", rol) :
+                new ObjectParameter("Rol", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_ROL_UPDATE", rolIdParameter, rolParameter);
+        }
+    
+        public virtual int SP_SEGMENTO_CREATE(string segmento)
+        {
+            var segmentoParameter = segmento != null ?
+                new ObjectParameter("Segmento", segmento) :
+                new ObjectParameter("Segmento", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_SEGMENTO_CREATE", segmentoParameter);
+        }
+    
+        public virtual int SP_SEGMENTO_DELETE(Nullable<int> segmentoId)
+        {
+            var segmentoIdParameter = segmentoId.HasValue ?
+                new ObjectParameter("SegmentoId", segmentoId) :
+                new ObjectParameter("SegmentoId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_SEGMENTO_DELETE", segmentoIdParameter);
+        }
+    
+        public virtual ObjectResult<SP_SEGMENTO_SELECT_ALL_Result> SP_SEGMENTO_SELECT_ALL()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_SEGMENTO_SELECT_ALL_Result>("SP_SEGMENTO_SELECT_ALL");
+        }
+    
+        public virtual int SP_SEGMENTO_UPDATE(Nullable<int> segmentoId, string segmento)
+        {
+            var segmentoIdParameter = segmentoId.HasValue ?
+                new ObjectParameter("SegmentoId", segmentoId) :
+                new ObjectParameter("SegmentoId", typeof(int));
+    
+            var segmentoParameter = segmento != null ?
+                new ObjectParameter("Segmento", segmento) :
+                new ObjectParameter("Segmento", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_SEGMENTO_UPDATE", segmentoIdParameter, segmentoParameter);
+        }
+    
+        public virtual int SP_TIPOFISCAL_CREATE(string tipoFiscal)
+        {
+            var tipoFiscalParameter = tipoFiscal != null ?
+                new ObjectParameter("TipoFiscal", tipoFiscal) :
+                new ObjectParameter("TipoFiscal", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_TIPOFISCAL_CREATE", tipoFiscalParameter);
+        }
+    
+        public virtual int SP_TIPOFISCAL_DELETE(Nullable<int> tipoFiscalId)
+        {
+            var tipoFiscalIdParameter = tipoFiscalId.HasValue ?
+                new ObjectParameter("TipoFiscalId", tipoFiscalId) :
+                new ObjectParameter("TipoFiscalId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_TIPOFISCAL_DELETE", tipoFiscalIdParameter);
+        }
+    
+        public virtual ObjectResult<SP_TIPOFISCAL_SELECT_ALL_Result> SP_TIPOFISCAL_SELECT_ALL()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_TIPOFISCAL_SELECT_ALL_Result>("SP_TIPOFISCAL_SELECT_ALL");
+        }
+    
+        public virtual int SP_TIPOFISCAL_UPDATE(Nullable<int> tipoFiscalId, string tipoFiscal)
+        {
+            var tipoFiscalIdParameter = tipoFiscalId.HasValue ?
+                new ObjectParameter("TipoFiscalId", tipoFiscalId) :
+                new ObjectParameter("TipoFiscalId", typeof(int));
+    
+            var tipoFiscalParameter = tipoFiscal != null ?
+                new ObjectParameter("TipoFiscal", tipoFiscal) :
+                new ObjectParameter("TipoFiscal", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_TIPOFISCAL_UPDATE", tipoFiscalIdParameter, tipoFiscalParameter);
+        }
+    
+        public virtual int SP_TIPOINDUSTRIA_CREATE(string tipoIndustria)
+        {
+            var tipoIndustriaParameter = tipoIndustria != null ?
+                new ObjectParameter("TipoIndustria", tipoIndustria) :
+                new ObjectParameter("TipoIndustria", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_TIPOINDUSTRIA_CREATE", tipoIndustriaParameter);
+        }
+    
+        public virtual int SP_TIPOINDUSTRIA_DELETE(Nullable<int> tipoIndustriaId)
+        {
+            var tipoIndustriaIdParameter = tipoIndustriaId.HasValue ?
+                new ObjectParameter("TipoIndustriaId", tipoIndustriaId) :
+                new ObjectParameter("TipoIndustriaId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_TIPOINDUSTRIA_DELETE", tipoIndustriaIdParameter);
+        }
+    
+        public virtual ObjectResult<SP_TIPOINDUSTRIA_SELECT_ALL_Result> SP_TIPOINDUSTRIA_SELECT_ALL()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_TIPOINDUSTRIA_SELECT_ALL_Result>("SP_TIPOINDUSTRIA_SELECT_ALL");
+        }
+    
+        public virtual int SP_TIPOINDUSTRIA_UPDATE(Nullable<int> tipoIndustriaId, string tipoIndustria)
+        {
+            var tipoIndustriaIdParameter = tipoIndustriaId.HasValue ?
+                new ObjectParameter("TipoIndustriaId", tipoIndustriaId) :
+                new ObjectParameter("TipoIndustriaId", typeof(int));
+    
+            var tipoIndustriaParameter = tipoIndustria != null ?
+                new ObjectParameter("TipoIndustria", tipoIndustria) :
+                new ObjectParameter("TipoIndustria", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_TIPOINDUSTRIA_UPDATE", tipoIndustriaIdParameter, tipoIndustriaParameter);
+        }
+    
+        public virtual int SP_USUARIO_CREATE(string userName, string password, string firstName, string lastName)
+        {
+            var userNameParameter = userName != null ?
+                new ObjectParameter("UserName", userName) :
+                new ObjectParameter("UserName", typeof(string));
+    
+            var passwordParameter = password != null ?
+                new ObjectParameter("Password", password) :
+                new ObjectParameter("Password", typeof(string));
+    
+            var firstNameParameter = firstName != null ?
+                new ObjectParameter("FirstName", firstName) :
+                new ObjectParameter("FirstName", typeof(string));
+    
+            var lastNameParameter = lastName != null ?
+                new ObjectParameter("LastName", lastName) :
+                new ObjectParameter("LastName", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_USUARIO_CREATE", userNameParameter, passwordParameter, firstNameParameter, lastNameParameter);
+        }
+    
+        public virtual ObjectResult<SP_USUARIO_SELECT_ALL_Result> SP_USUARIO_SELECT_ALL()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SP_USUARIO_SELECT_ALL_Result>("SP_USUARIO_SELECT_ALL");
+        }
+    
+        public virtual int SP_USUARIO_UPDATE(Nullable<int> uSerId, string userName, string password, string firstName, string lastName)
+        {
+            var uSerIdParameter = uSerId.HasValue ?
+                new ObjectParameter("USerId", uSerId) :
+                new ObjectParameter("USerId", typeof(int));
+    
+            var userNameParameter = userName != null ?
+                new ObjectParameter("UserName", userName) :
+                new ObjectParameter("UserName", typeof(string));
+    
+            var passwordParameter = password != null ?
+                new ObjectParameter("Password", password) :
+                new ObjectParameter("Password", typeof(string));
+    
+            var firstNameParameter = firstName != null ?
+                new ObjectParameter("FirstName", firstName) :
+                new ObjectParameter("FirstName", typeof(string));
+    
+            var lastNameParameter = lastName != null ?
+                new ObjectParameter("LastName", lastName) :
+                new ObjectParameter("LastName", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_USUARIO_UPDATE", uSerIdParameter, userNameParameter, passwordParameter, firstNameParameter, lastNameParameter);
+        }
+    
+        public virtual int SP_USUARIOS_DELETE(Nullable<int> userId)
+        {
+            var userIdParameter = userId.HasValue ?
+                new ObjectParameter("UserId", userId) :
+                new ObjectParameter("UserId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_USUARIOS_DELETE", userIdParameter);
+        }
     }
 }

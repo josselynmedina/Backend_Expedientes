@@ -168,6 +168,7 @@
     <Compile Include="Models\Documento.cs">
       <DependentUpon>ProcesoLogistico.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\DocumentoModel.cs" />
     <Compile Include="Models\Financiamiento.cs">
       <DependentUpon>ProcesoLogistico.tt</DependentUpon>
     </Compile>
@@ -219,6 +220,42 @@
     <Compile Include="Models\SolicitudCredito.cs">
       <DependentUpon>ProcesoLogistico.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\SP_CATEGORIA_SELECT_ALL_Result.cs">
+      <DependentUpon>ProcesoLogistico.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SP_CLIENTE_SELECT_ALL_Result.cs">
+      <DependentUpon>ProcesoLogistico.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SP_CODIGOSAP_SELECT_ALL_Result.cs">
+      <DependentUpon>ProcesoLogistico.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SP_DOCUMENTO_SELECT_ALL_Result.cs">
+      <DependentUpon>ProcesoLogistico.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SP_GRUPOPERSONA_SELECT_ALL_Result.cs">
+      <DependentUpon>ProcesoLogistico.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SP_LINEAPRODUCTO_SELECT_ALL_Result.cs">
+      <DependentUpon>ProcesoLogistico.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SP_PRIVILEGIO_SELECT_ALL_Result.cs">
+      <DependentUpon>ProcesoLogistico.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SP_ROL_SELECT_ALL_Result.cs">
+      <DependentUpon>ProcesoLogistico.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SP_SEGMENTO_SELECT_ALL_Result.cs">
+      <DependentUpon>ProcesoLogistico.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SP_TIPOFISCAL_SELECT_ALL_Result.cs">
+      <DependentUpon>ProcesoLogistico.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SP_TIPOINDUSTRIA_SELECT_ALL_Result.cs">
+      <DependentUpon>ProcesoLogistico.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SP_USUARIO_SELECT_ALL_Result.cs">
+      <DependentUpon>ProcesoLogistico.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\TipoFiscal.cs">
       <DependentUpon>ProcesoLogistico.tt</DependentUpon>
     </Compile>
@@ -235,6 +272,7 @@
       <DependentUpon>ProcesoLogistico.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\DocumentosRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -369,7 +407,6 @@
     <Content Include="Views\GrupoPersonas\Details.cshtml" />
     <Content Include="Views\GrupoPersonas\Edit.cshtml" />
     <Content Include="Views\GrupoPersonas\Index.cshtml" />
-    <Content Include="Views\Documento\Create.cshtml" />
     <Content Include="Views\Documento\Delete.cshtml" />
     <Content Include="Views\Documento\Details.cshtml" />
     <Content Include="Views\Documento\Edit.cshtml" />
@@ -394,6 +431,7 @@
     <Content Include="Views\Clientes\Details.cshtml" />
     <Content Include="Views\Clientes\Edit.cshtml" />
     <Content Include="Views\Clientes\Index.cshtml" />
+    <Content Include="Views\Documento\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

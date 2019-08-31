@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
@@ -7,6 +8,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using ApiExpedientes.Models;
+using ApiExpedientes.Repository;
 
 namespace ApiExpedientes.Controllers
 {
@@ -39,8 +41,6 @@ namespace ApiExpedientes.Controllers
         // GET: Documento/Create
         public ActionResult Create()
         {
-            ViewBag.ModifiedBy = new SelectList(db.Usuarios, "UserId", "UserName");
-            ViewBag.CreatedBy = new SelectList(db.Usuarios, "UserId", "UserName");
             return View();
         }
 
@@ -49,20 +49,26 @@ namespace ApiExpedientes.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "DocumentoId,Documento1,CreatedDate,ModifiedDate,CreatedBy,ModifiedBy")] Documento documento)
+        public ActionResult Create([Bind(Include = "Contacto1")] Documento documento)
         {
-            if (ModelState.IsValid)
-            {
-                db.Documentoes.Add(documento);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+            try {
+                if (ModelState.IsValid)
+                {
+                    DocumentosRepository DocRepo = new DocumentosRepository();
+                    if (DocRepo.AddDocumentos(documento))
+                    {
+                        ViewBag.Message = "Agregado";
+                    }
+                }
+                return View(documento);
             }
-
-            ViewBag.ModifiedBy = new SelectList(db.Usuarios, "UserId", "UserName", documento.ModifiedBy);
-            ViewBag.CreatedBy = new SelectList(db.Usuarios, "UserId", "UserName", documento.CreatedBy);
-            return View(documento);
+            catch
+            {
+                return View();
+            }
         }
 
+        
         // GET: Documento/Edit/5
         public ActionResult Edit(int? id)
         {

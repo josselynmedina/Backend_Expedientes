@@ -1030,15 +1030,179 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Function Name="SP_USUARIO_INSERT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+        <Function Name="SP_CATEGORIA_CREATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Categoria" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SP_CATEGORIA_DELETE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CategoriaId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_CATEGORIA_SELECT_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_CATEGORIA_UPDATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CategoriaId" Type="int" Mode="In" />
+          <Parameter Name="Categoria" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SP_CLIENTE_CREATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="GrupoEmpresarial" Type="nvarchar" Mode="In" />
+          <Parameter Name="RegistroTributario" Type="nvarchar" Mode="In" />
+          <Parameter Name="TipoRegistro" Type="int" Mode="In" />
+          <Parameter Name="Direccion" Type="nvarchar" Mode="In" />
+          <Parameter Name="WebPage" Type="nvarchar" Mode="In" />
+          <Parameter Name="Actividad" Type="nvarchar" Mode="In" />
+          <Parameter Name="LineaProducto" Type="int" Mode="In" />
+          <Parameter Name="Vision" Type="nvarchar" Mode="In" />
+          <Parameter Name="Mision" Type="nvarchar" Mode="In" />
+          <Parameter Name="Valores" Type="nvarchar" Mode="In" />
+          <Parameter Name="Pais" Type="nvarchar" Mode="In" />
+          <Parameter Name="Telefono" Type="nvarchar" Mode="In" />
+          <Parameter Name="Industria" Type="nvarchar" Mode="In" />
+          <Parameter Name="TipoIndustria" Type="int" Mode="In" />
+          <Parameter Name="Segmento" Type="int" Mode="In" />
+          <Parameter Name="RSE" Type="nvarchar" Mode="In" />
+          <Parameter Name="Marcas" Type="nvarchar" Mode="In" />
+          <Parameter Name="Mercado" Type="int" Mode="In" />
+          <Parameter Name="PaisFacturacion" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_CLIENTE_DELETE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ClientId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_CLIENTE_SELECT_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_CLIENTE_UPDATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ClientId" Type="int" Mode="In" />
+          <Parameter Name="GrupoEmpresarial" Type="nvarchar" Mode="In" />
+          <Parameter Name="RegistroTributario" Type="nvarchar" Mode="In" />
+          <Parameter Name="TipoRegistro" Type="int" Mode="In" />
+          <Parameter Name="Direccion" Type="nvarchar" Mode="In" />
+          <Parameter Name="WebPage" Type="nvarchar" Mode="In" />
+          <Parameter Name="Actividad" Type="nvarchar" Mode="In" />
+          <Parameter Name="LineaProducto" Type="int" Mode="In" />
+          <Parameter Name="Vision" Type="nvarchar" Mode="In" />
+          <Parameter Name="Mision" Type="nvarchar" Mode="In" />
+          <Parameter Name="Valores" Type="nvarchar" Mode="In" />
+          <Parameter Name="Pais" Type="nvarchar" Mode="In" />
+          <Parameter Name="Telefono" Type="nvarchar" Mode="In" />
+          <Parameter Name="Industria" Type="nvarchar" Mode="In" />
+          <Parameter Name="TipoIndustria" Type="int" Mode="In" />
+          <Parameter Name="Segmento" Type="int" Mode="In" />
+          <Parameter Name="RSE" Type="nvarchar" Mode="In" />
+          <Parameter Name="Marcas" Type="nvarchar" Mode="In" />
+          <Parameter Name="Mercado" Type="int" Mode="In" />
+          <Parameter Name="PaisFacturacion" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_CODIGOSAP_CREATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodigoSap" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SP_CODIGOSAP_DELETE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodigoSapId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_CODIGOSAP_SELECT_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_CODIGOSAP_UPDATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CodigoSapId" Type="int" Mode="In" />
+          <Parameter Name="CodigoSap" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SP_DOCUMENTO_CREATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Documento" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SP_DOCUMENTO_DELETE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="DocumentoId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_DOCUMENTO_SELECT_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_DOCUMENTO_UPDATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="DocumentoId" Type="int" Mode="In" />
+          <Parameter Name="Documento" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SP_GRUPOPERSONA_CREATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="GrupoPersona" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SP_GRUPOPERSONA_DELETE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="GrupoPersonaId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_GRUPOPERSONA_SELECT_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_GRUPOPERSONA_UPDATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="GrupoPersonaId" Type="int" Mode="In" />
+          <Parameter Name="GrupoPersona" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SP_LINEAPRODUCTO_CREATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="LineaProducto" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SP_LINEAPRODUCTO_DELETE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="LineaProductoId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_LINEAPRODUCTO_SELECT_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_LINEAPRODUCTO_UPDATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="LineaProductoId" Type="int" Mode="In" />
+          <Parameter Name="LineaProducto" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SP_PRIVILEGIO_CREATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Privilegio" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SP_PRIVILEGIO_DELETE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PrivilegioId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_PRIVILEGIO_SELECT_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_PRIVILEGIO_UPDATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PrivilegioId" Type="int" Mode="In" />
+          <Parameter Name="Privilegio" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SP_ROL_CREATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Rol" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SP_ROL_DELETE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="RolId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_ROL_SELECT_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_ROL_UPDATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="RolId" Type="int" Mode="In" />
+          <Parameter Name="Rol" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SP_SEGMENTO_CREATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Segmento" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SP_SEGMENTO_DELETE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SegmentoId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_SEGMENTO_SELECT_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_SEGMENTO_UPDATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SegmentoId" Type="int" Mode="In" />
+          <Parameter Name="Segmento" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SP_TIPOFISCAL_CREATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TipoFiscal" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SP_TIPOFISCAL_DELETE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TipoFiscalId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_TIPOFISCAL_SELECT_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_TIPOFISCAL_UPDATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TipoFiscalId" Type="int" Mode="In" />
+          <Parameter Name="TipoFiscal" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SP_TIPOINDUSTRIA_CREATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TipoIndustria" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SP_TIPOINDUSTRIA_DELETE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TipoIndustriaId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_TIPOINDUSTRIA_SELECT_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_TIPOINDUSTRIA_UPDATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TipoIndustriaId" Type="int" Mode="In" />
+          <Parameter Name="TipoIndustria" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SP_USUARIO_CREATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="UserName" Type="nvarchar" Mode="In" />
           <Parameter Name="Password" Type="nvarchar" Mode="In" />
           <Parameter Name="FirstName" Type="nvarchar" Mode="In" />
           <Parameter Name="LastName" Type="nvarchar" Mode="In" />
-          <Parameter Name="CreatedDate" Type="date" Mode="In" />
-          <Parameter Name="ModifiedDate" Type="date" Mode="In" />
-          <Parameter Name="CreatedBy" Type="int" Mode="In" />
-          <Parameter Name="ModifiedBy" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_USUARIO_SELECT_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_USUARIO_UPDATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="USerId" Type="int" Mode="In" />
+          <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Password" Type="nvarchar" Mode="In" />
+          <Parameter Name="FirstName" Type="nvarchar" Mode="In" />
+          <Parameter Name="LastName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SP_USUARIOS_DELETE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserId" Type="int" Mode="In" />
         </Function>
         <EntityContainer Name="ProcesoLogisticoModelStoreContainer">
           <EntitySet Name="Categoria" EntityType="Self.Categoria" Schema="dbo" store:Type="Tables" />
@@ -2722,6 +2886,180 @@
             <End Role="Segmento" EntitySet="Segmentoes" />
             <End Role="Cliente" EntitySet="Clientes" />
           </AssociationSet>
+          <FunctionImport Name="SP_CATEGORIA_CREATE">
+            <Parameter Name="Categoria" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_CATEGORIA_DELETE">
+            <Parameter Name="CategoriaId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_CATEGORIA_SELECT_ALL" ReturnType="Collection(ProcesoLogisticoModel.SP_CATEGORIA_SELECT_ALL_Result)" />
+          <FunctionImport Name="SP_CATEGORIA_UPDATE">
+            <Parameter Name="CategoriaId" Mode="In" Type="Int32" />
+            <Parameter Name="Categoria" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_CLIENTE_CREATE">
+            <Parameter Name="GrupoEmpresarial" Mode="In" Type="String" />
+            <Parameter Name="RegistroTributario" Mode="In" Type="String" />
+            <Parameter Name="TipoRegistro" Mode="In" Type="Int32" />
+            <Parameter Name="Direccion" Mode="In" Type="String" />
+            <Parameter Name="WebPage" Mode="In" Type="String" />
+            <Parameter Name="Actividad" Mode="In" Type="String" />
+            <Parameter Name="LineaProducto" Mode="In" Type="Int32" />
+            <Parameter Name="Vision" Mode="In" Type="String" />
+            <Parameter Name="Mision" Mode="In" Type="String" />
+            <Parameter Name="Valores" Mode="In" Type="String" />
+            <Parameter Name="Pais" Mode="In" Type="String" />
+            <Parameter Name="Telefono" Mode="In" Type="String" />
+            <Parameter Name="Industria" Mode="In" Type="String" />
+            <Parameter Name="TipoIndustria" Mode="In" Type="Int32" />
+            <Parameter Name="Segmento" Mode="In" Type="Int32" />
+            <Parameter Name="RSE" Mode="In" Type="String" />
+            <Parameter Name="Marcas" Mode="In" Type="String" />
+            <Parameter Name="Mercado" Mode="In" Type="Int32" />
+            <Parameter Name="PaisFacturacion" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_CLIENTE_DELETE">
+            <Parameter Name="ClientId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_CLIENTE_SELECT_ALL" ReturnType="Collection(ProcesoLogisticoModel.SP_CLIENTE_SELECT_ALL_Result)" />
+          <FunctionImport Name="SP_CLIENTE_UPDATE">
+            <Parameter Name="ClientId" Mode="In" Type="Int32" />
+            <Parameter Name="GrupoEmpresarial" Mode="In" Type="String" />
+            <Parameter Name="RegistroTributario" Mode="In" Type="String" />
+            <Parameter Name="TipoRegistro" Mode="In" Type="Int32" />
+            <Parameter Name="Direccion" Mode="In" Type="String" />
+            <Parameter Name="WebPage" Mode="In" Type="String" />
+            <Parameter Name="Actividad" Mode="In" Type="String" />
+            <Parameter Name="LineaProducto" Mode="In" Type="Int32" />
+            <Parameter Name="Vision" Mode="In" Type="String" />
+            <Parameter Name="Mision" Mode="In" Type="String" />
+            <Parameter Name="Valores" Mode="In" Type="String" />
+            <Parameter Name="Pais" Mode="In" Type="String" />
+            <Parameter Name="Telefono" Mode="In" Type="String" />
+            <Parameter Name="Industria" Mode="In" Type="String" />
+            <Parameter Name="TipoIndustria" Mode="In" Type="Int32" />
+            <Parameter Name="Segmento" Mode="In" Type="Int32" />
+            <Parameter Name="RSE" Mode="In" Type="String" />
+            <Parameter Name="Marcas" Mode="In" Type="String" />
+            <Parameter Name="Mercado" Mode="In" Type="Int32" />
+            <Parameter Name="PaisFacturacion" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_CODIGOSAP_CREATE">
+            <Parameter Name="CodigoSap" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_CODIGOSAP_DELETE">
+            <Parameter Name="CodigoSapId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_CODIGOSAP_SELECT_ALL" ReturnType="Collection(ProcesoLogisticoModel.SP_CODIGOSAP_SELECT_ALL_Result)" />
+          <FunctionImport Name="SP_CODIGOSAP_UPDATE">
+            <Parameter Name="CodigoSapId" Mode="In" Type="Int32" />
+            <Parameter Name="CodigoSap" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_DOCUMENTO_CREATE">
+            <Parameter Name="Documento" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_DOCUMENTO_DELETE">
+            <Parameter Name="DocumentoId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_DOCUMENTO_SELECT_ALL" ReturnType="Collection(ProcesoLogisticoModel.SP_DOCUMENTO_SELECT_ALL_Result)" />
+          <FunctionImport Name="SP_DOCUMENTO_UPDATE">
+            <Parameter Name="DocumentoId" Mode="In" Type="Int32" />
+            <Parameter Name="Documento" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_GRUPOPERSONA_CREATE">
+            <Parameter Name="GrupoPersona" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_GRUPOPERSONA_DELETE">
+            <Parameter Name="GrupoPersonaId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_GRUPOPERSONA_SELECT_ALL" ReturnType="Collection(ProcesoLogisticoModel.SP_GRUPOPERSONA_SELECT_ALL_Result)" />
+          <FunctionImport Name="SP_GRUPOPERSONA_UPDATE">
+            <Parameter Name="GrupoPersonaId" Mode="In" Type="Int32" />
+            <Parameter Name="GrupoPersona" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_LINEAPRODUCTO_CREATE">
+            <Parameter Name="LineaProducto" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_LINEAPRODUCTO_DELETE">
+            <Parameter Name="LineaProductoId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_LINEAPRODUCTO_SELECT_ALL" ReturnType="Collection(ProcesoLogisticoModel.SP_LINEAPRODUCTO_SELECT_ALL_Result)" />
+          <FunctionImport Name="SP_LINEAPRODUCTO_UPDATE">
+            <Parameter Name="LineaProductoId" Mode="In" Type="Int32" />
+            <Parameter Name="LineaProducto" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_PRIVILEGIO_CREATE">
+            <Parameter Name="Privilegio" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_PRIVILEGIO_DELETE">
+            <Parameter Name="PrivilegioId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_PRIVILEGIO_SELECT_ALL" ReturnType="Collection(ProcesoLogisticoModel.SP_PRIVILEGIO_SELECT_ALL_Result)" />
+          <FunctionImport Name="SP_PRIVILEGIO_UPDATE">
+            <Parameter Name="PrivilegioId" Mode="In" Type="Int32" />
+            <Parameter Name="Privilegio" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_ROL_CREATE">
+            <Parameter Name="Rol" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_ROL_DELETE">
+            <Parameter Name="RolId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_ROL_SELECT_ALL" ReturnType="Collection(ProcesoLogisticoModel.SP_ROL_SELECT_ALL_Result)" />
+          <FunctionImport Name="SP_ROL_UPDATE">
+            <Parameter Name="RolId" Mode="In" Type="Int32" />
+            <Parameter Name="Rol" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_SEGMENTO_CREATE">
+            <Parameter Name="Segmento" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_SEGMENTO_DELETE">
+            <Parameter Name="SegmentoId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_SEGMENTO_SELECT_ALL" ReturnType="Collection(ProcesoLogisticoModel.SP_SEGMENTO_SELECT_ALL_Result)" />
+          <FunctionImport Name="SP_SEGMENTO_UPDATE">
+            <Parameter Name="SegmentoId" Mode="In" Type="Int32" />
+            <Parameter Name="Segmento" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_TIPOFISCAL_CREATE">
+            <Parameter Name="TipoFiscal" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_TIPOFISCAL_DELETE">
+            <Parameter Name="TipoFiscalId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_TIPOFISCAL_SELECT_ALL" ReturnType="Collection(ProcesoLogisticoModel.SP_TIPOFISCAL_SELECT_ALL_Result)" />
+          <FunctionImport Name="SP_TIPOFISCAL_UPDATE">
+            <Parameter Name="TipoFiscalId" Mode="In" Type="Int32" />
+            <Parameter Name="TipoFiscal" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_TIPOINDUSTRIA_CREATE">
+            <Parameter Name="TipoIndustria" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_TIPOINDUSTRIA_DELETE">
+            <Parameter Name="TipoIndustriaId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_TIPOINDUSTRIA_SELECT_ALL" ReturnType="Collection(ProcesoLogisticoModel.SP_TIPOINDUSTRIA_SELECT_ALL_Result)" />
+          <FunctionImport Name="SP_TIPOINDUSTRIA_UPDATE">
+            <Parameter Name="TipoIndustriaId" Mode="In" Type="Int32" />
+            <Parameter Name="TipoIndustria" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_USUARIO_CREATE">
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="Password" Mode="In" Type="String" />
+            <Parameter Name="FirstName" Mode="In" Type="String" />
+            <Parameter Name="LastName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_USUARIO_SELECT_ALL" ReturnType="Collection(ProcesoLogisticoModel.SP_USUARIO_SELECT_ALL_Result)" />
+          <FunctionImport Name="SP_USUARIO_UPDATE">
+            <Parameter Name="USerId" Mode="In" Type="Int32" />
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="Password" Mode="In" Type="String" />
+            <Parameter Name="FirstName" Mode="In" Type="String" />
+            <Parameter Name="LastName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_USUARIOS_DELETE">
+            <Parameter Name="UserId" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <Association Name="FK_Cliente_LineaProducto">
           <End Type="ProcesoLogisticoModel.LineaProducto" Role="LineaProducto" Multiplicity="1" />
@@ -2747,6 +3085,122 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <ComplexType Name="SP_CATEGORIA_SELECT_ALL_Result">
+          <Property Type="Int32" Name="CategoriaId" Nullable="false" />
+          <Property Type="String" Name="Categoria" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="true" />
+          <Property Type="Int32" Name="CreatedBy" Nullable="false" />
+          <Property Type="Int32" Name="ModifiedBy" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="SP_CLIENTE_SELECT_ALL_Result">
+          <Property Type="Int32" Name="ClienteId" Nullable="false" />
+          <Property Type="String" Name="GrupoEmpresarial" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="RegistroTributario" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="TipoRegistro" Nullable="false" />
+          <Property Type="String" Name="Direccion" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="WebPage" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Actividad" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="LineaProducto" Nullable="false" />
+          <Property Type="String" Name="Vision" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Mision" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Valores" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="Pais" Nullable="false" />
+          <Property Type="String" Name="Telefono" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Industria" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="TipoIndustria" Nullable="false" />
+          <Property Type="Int32" Name="Segmento" Nullable="false" />
+          <Property Type="String" Name="RSE" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Marcas" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="Mercado" Nullable="false" />
+          <Property Type="Int32" Name="PaisFacturacion" Nullable="false" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="true" />
+          <Property Type="Int32" Name="CreatedBy" Nullable="false" />
+          <Property Type="Int32" Name="ModifiedBy" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="SP_CODIGOSAP_SELECT_ALL_Result">
+          <Property Type="Int32" Name="CodigoSapId" Nullable="false" />
+          <Property Type="String" Name="CodigoSap" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="true" />
+          <Property Type="Int32" Name="CreatedBy" Nullable="false" />
+          <Property Type="Int32" Name="ModifiedBy" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="SP_DOCUMENTO_SELECT_ALL_Result">
+          <Property Type="Int32" Name="DocumentoId" Nullable="false" />
+          <Property Type="String" Name="Documento" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="true" />
+          <Property Type="Int32" Name="CreatedBy" Nullable="false" />
+          <Property Type="Int32" Name="ModifiedBy" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="SP_GRUPOPERSONA_SELECT_ALL_Result">
+          <Property Type="Int32" Name="GrupoPersonaId" Nullable="false" />
+          <Property Type="String" Name="GrupoPersona" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="true" />
+          <Property Type="Int32" Name="CreatedBy" Nullable="false" />
+          <Property Type="Int32" Name="ModifiedBy" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="SP_LINEAPRODUCTO_SELECT_ALL_Result">
+          <Property Type="Int32" Name="LineaProductoId" Nullable="false" />
+          <Property Type="String" Name="LineaProducto" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="true" />
+          <Property Type="Int32" Name="CreatedBy" Nullable="false" />
+          <Property Type="Int32" Name="ModifiedBy" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="SP_PRIVILEGIO_SELECT_ALL_Result">
+          <Property Type="Int32" Name="PrivilegiosId" Nullable="false" />
+          <Property Type="String" Name="Privilegio" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="true" />
+          <Property Type="Int32" Name="CreatedBy" Nullable="false" />
+          <Property Type="Int32" Name="ModifiedBy" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="SP_ROL_SELECT_ALL_Result">
+          <Property Type="Int32" Name="RolId" Nullable="false" />
+          <Property Type="String" Name="RolDescription" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="true" />
+          <Property Type="Int32" Name="CreatedBy" Nullable="true" />
+          <Property Type="Int32" Name="ModifiedBy" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="SP_SEGMENTO_SELECT_ALL_Result">
+          <Property Type="Int32" Name="SegmentoId" Nullable="false" />
+          <Property Type="String" Name="Segmento" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="true" />
+          <Property Type="Int32" Name="CreatedBy" Nullable="false" />
+          <Property Type="Int32" Name="ModifiedBy" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="SP_TIPOFISCAL_SELECT_ALL_Result">
+          <Property Type="Int32" Name="TipoFiscalId" Nullable="false" />
+          <Property Type="String" Name="TipoFiscal" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="true" />
+          <Property Type="Int32" Name="CreatedBy" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="SP_TIPOINDUSTRIA_SELECT_ALL_Result">
+          <Property Type="Int32" Name="TipoIndustriaId" Nullable="false" />
+          <Property Type="String" Name="TipoIndustria" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="true" />
+          <Property Type="Int32" Name="CreatedBy" Nullable="false" />
+          <Property Type="Int32" Name="ModifiedBy" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="SP_USUARIO_SELECT_ALL_Result">
+          <Property Type="Int32" Name="UserId" Nullable="false" />
+          <Property Type="String" Name="UserName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Password" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="FirstName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="LastName" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" />
+          <Property Type="DateTime" Name="ModifiedDate" Nullable="true" />
+          <Property Type="Int32" Name="CreatedBy" Nullable="false" />
+          <Property Type="Int32" Name="ModifiedBy" Nullable="false" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -3053,7 +3507,206 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="SP_USUARIO_INSERT" FunctionName="ProcesoLogisticoModel.Store.SP_USUARIO_INSERT" />
+          <FunctionImportMapping FunctionImportName="SP_CATEGORIA_CREATE" FunctionName="ProcesoLogisticoModel.Store.SP_CATEGORIA_CREATE" />
+          <FunctionImportMapping FunctionImportName="SP_CATEGORIA_DELETE" FunctionName="ProcesoLogisticoModel.Store.SP_CATEGORIA_DELETE" />
+          <FunctionImportMapping FunctionImportName="SP_CATEGORIA_SELECT_ALL" FunctionName="ProcesoLogisticoModel.Store.SP_CATEGORIA_SELECT_ALL">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProcesoLogisticoModel.SP_CATEGORIA_SELECT_ALL_Result">
+                <ScalarProperty Name="CategoriaId" ColumnName="CategoriaId" />
+                <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_CATEGORIA_UPDATE" FunctionName="ProcesoLogisticoModel.Store.SP_CATEGORIA_UPDATE" />
+          <FunctionImportMapping FunctionImportName="SP_CLIENTE_CREATE" FunctionName="ProcesoLogisticoModel.Store.SP_CLIENTE_CREATE" />
+          <FunctionImportMapping FunctionImportName="SP_CLIENTE_DELETE" FunctionName="ProcesoLogisticoModel.Store.SP_CLIENTE_DELETE" />
+          <FunctionImportMapping FunctionImportName="SP_CLIENTE_SELECT_ALL" FunctionName="ProcesoLogisticoModel.Store.SP_CLIENTE_SELECT_ALL">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProcesoLogisticoModel.SP_CLIENTE_SELECT_ALL_Result">
+                <ScalarProperty Name="ClienteId" ColumnName="ClienteId" />
+                <ScalarProperty Name="GrupoEmpresarial" ColumnName="GrupoEmpresarial" />
+                <ScalarProperty Name="RegistroTributario" ColumnName="RegistroTributario" />
+                <ScalarProperty Name="TipoRegistro" ColumnName="TipoRegistro" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="WebPage" ColumnName="WebPage" />
+                <ScalarProperty Name="Actividad" ColumnName="Actividad" />
+                <ScalarProperty Name="LineaProducto" ColumnName="LineaProducto" />
+                <ScalarProperty Name="Vision" ColumnName="Vision" />
+                <ScalarProperty Name="Mision" ColumnName="Mision" />
+                <ScalarProperty Name="Valores" ColumnName="Valores" />
+                <ScalarProperty Name="Pais" ColumnName="Pais" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Industria" ColumnName="Industria" />
+                <ScalarProperty Name="TipoIndustria" ColumnName="TipoIndustria" />
+                <ScalarProperty Name="Segmento" ColumnName="Segmento" />
+                <ScalarProperty Name="RSE" ColumnName="RSE" />
+                <ScalarProperty Name="Marcas" ColumnName="Marcas" />
+                <ScalarProperty Name="Mercado" ColumnName="Mercado" />
+                <ScalarProperty Name="PaisFacturacion" ColumnName="PaisFacturacion" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_CLIENTE_UPDATE" FunctionName="ProcesoLogisticoModel.Store.SP_CLIENTE_UPDATE" />
+          <FunctionImportMapping FunctionImportName="SP_CODIGOSAP_CREATE" FunctionName="ProcesoLogisticoModel.Store.SP_CODIGOSAP_CREATE" />
+          <FunctionImportMapping FunctionImportName="SP_CODIGOSAP_DELETE" FunctionName="ProcesoLogisticoModel.Store.SP_CODIGOSAP_DELETE" />
+          <FunctionImportMapping FunctionImportName="SP_CODIGOSAP_SELECT_ALL" FunctionName="ProcesoLogisticoModel.Store.SP_CODIGOSAP_SELECT_ALL">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProcesoLogisticoModel.SP_CODIGOSAP_SELECT_ALL_Result">
+                <ScalarProperty Name="CodigoSapId" ColumnName="CodigoSapId" />
+                <ScalarProperty Name="CodigoSap" ColumnName="CodigoSap" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_CODIGOSAP_UPDATE" FunctionName="ProcesoLogisticoModel.Store.SP_CODIGOSAP_UPDATE" />
+          <FunctionImportMapping FunctionImportName="SP_DOCUMENTO_CREATE" FunctionName="ProcesoLogisticoModel.Store.SP_DOCUMENTO_CREATE" />
+          <FunctionImportMapping FunctionImportName="SP_DOCUMENTO_DELETE" FunctionName="ProcesoLogisticoModel.Store.SP_DOCUMENTO_DELETE" />
+          <FunctionImportMapping FunctionImportName="SP_DOCUMENTO_SELECT_ALL" FunctionName="ProcesoLogisticoModel.Store.SP_DOCUMENTO_SELECT_ALL">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProcesoLogisticoModel.SP_DOCUMENTO_SELECT_ALL_Result">
+                <ScalarProperty Name="DocumentoId" ColumnName="DocumentoId" />
+                <ScalarProperty Name="Documento" ColumnName="Documento" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_DOCUMENTO_UPDATE" FunctionName="ProcesoLogisticoModel.Store.SP_DOCUMENTO_UPDATE" />
+          <FunctionImportMapping FunctionImportName="SP_GRUPOPERSONA_CREATE" FunctionName="ProcesoLogisticoModel.Store.SP_GRUPOPERSONA_CREATE" />
+          <FunctionImportMapping FunctionImportName="SP_GRUPOPERSONA_DELETE" FunctionName="ProcesoLogisticoModel.Store.SP_GRUPOPERSONA_DELETE" />
+          <FunctionImportMapping FunctionImportName="SP_GRUPOPERSONA_SELECT_ALL" FunctionName="ProcesoLogisticoModel.Store.SP_GRUPOPERSONA_SELECT_ALL">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProcesoLogisticoModel.SP_GRUPOPERSONA_SELECT_ALL_Result">
+                <ScalarProperty Name="GrupoPersonaId" ColumnName="GrupoPersonaId" />
+                <ScalarProperty Name="GrupoPersona" ColumnName="GrupoPersona" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_GRUPOPERSONA_UPDATE" FunctionName="ProcesoLogisticoModel.Store.SP_GRUPOPERSONA_UPDATE" />
+          <FunctionImportMapping FunctionImportName="SP_LINEAPRODUCTO_CREATE" FunctionName="ProcesoLogisticoModel.Store.SP_LINEAPRODUCTO_CREATE" />
+          <FunctionImportMapping FunctionImportName="SP_LINEAPRODUCTO_DELETE" FunctionName="ProcesoLogisticoModel.Store.SP_LINEAPRODUCTO_DELETE" />
+          <FunctionImportMapping FunctionImportName="SP_LINEAPRODUCTO_SELECT_ALL" FunctionName="ProcesoLogisticoModel.Store.SP_LINEAPRODUCTO_SELECT_ALL">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProcesoLogisticoModel.SP_LINEAPRODUCTO_SELECT_ALL_Result">
+                <ScalarProperty Name="LineaProductoId" ColumnName="LineaProductoId" />
+                <ScalarProperty Name="LineaProducto" ColumnName="LineaProducto" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_LINEAPRODUCTO_UPDATE" FunctionName="ProcesoLogisticoModel.Store.SP_LINEAPRODUCTO_UPDATE" />
+          <FunctionImportMapping FunctionImportName="SP_PRIVILEGIO_CREATE" FunctionName="ProcesoLogisticoModel.Store.SP_PRIVILEGIO_CREATE" />
+          <FunctionImportMapping FunctionImportName="SP_PRIVILEGIO_DELETE" FunctionName="ProcesoLogisticoModel.Store.SP_PRIVILEGIO_DELETE" />
+          <FunctionImportMapping FunctionImportName="SP_PRIVILEGIO_SELECT_ALL" FunctionName="ProcesoLogisticoModel.Store.SP_PRIVILEGIO_SELECT_ALL">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProcesoLogisticoModel.SP_PRIVILEGIO_SELECT_ALL_Result">
+                <ScalarProperty Name="PrivilegiosId" ColumnName="PrivilegiosId" />
+                <ScalarProperty Name="Privilegio" ColumnName="Privilegio" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_PRIVILEGIO_UPDATE" FunctionName="ProcesoLogisticoModel.Store.SP_PRIVILEGIO_UPDATE" />
+          <FunctionImportMapping FunctionImportName="SP_ROL_CREATE" FunctionName="ProcesoLogisticoModel.Store.SP_ROL_CREATE" />
+          <FunctionImportMapping FunctionImportName="SP_ROL_DELETE" FunctionName="ProcesoLogisticoModel.Store.SP_ROL_DELETE" />
+          <FunctionImportMapping FunctionImportName="SP_ROL_SELECT_ALL" FunctionName="ProcesoLogisticoModel.Store.SP_ROL_SELECT_ALL">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProcesoLogisticoModel.SP_ROL_SELECT_ALL_Result">
+                <ScalarProperty Name="RolId" ColumnName="RolId" />
+                <ScalarProperty Name="RolDescription" ColumnName="RolDescription" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_ROL_UPDATE" FunctionName="ProcesoLogisticoModel.Store.SP_ROL_UPDATE" />
+          <FunctionImportMapping FunctionImportName="SP_SEGMENTO_CREATE" FunctionName="ProcesoLogisticoModel.Store.SP_SEGMENTO_CREATE" />
+          <FunctionImportMapping FunctionImportName="SP_SEGMENTO_DELETE" FunctionName="ProcesoLogisticoModel.Store.SP_SEGMENTO_DELETE" />
+          <FunctionImportMapping FunctionImportName="SP_SEGMENTO_SELECT_ALL" FunctionName="ProcesoLogisticoModel.Store.SP_SEGMENTO_SELECT_ALL">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProcesoLogisticoModel.SP_SEGMENTO_SELECT_ALL_Result">
+                <ScalarProperty Name="SegmentoId" ColumnName="SegmentoId" />
+                <ScalarProperty Name="Segmento" ColumnName="Segmento" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_SEGMENTO_UPDATE" FunctionName="ProcesoLogisticoModel.Store.SP_SEGMENTO_UPDATE" />
+          <FunctionImportMapping FunctionImportName="SP_TIPOFISCAL_CREATE" FunctionName="ProcesoLogisticoModel.Store.SP_TIPOFISCAL_CREATE" />
+          <FunctionImportMapping FunctionImportName="SP_TIPOFISCAL_DELETE" FunctionName="ProcesoLogisticoModel.Store.SP_TIPOFISCAL_DELETE" />
+          <FunctionImportMapping FunctionImportName="SP_TIPOFISCAL_SELECT_ALL" FunctionName="ProcesoLogisticoModel.Store.SP_TIPOFISCAL_SELECT_ALL">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProcesoLogisticoModel.SP_TIPOFISCAL_SELECT_ALL_Result">
+                <ScalarProperty Name="TipoFiscalId" ColumnName="TipoFiscalId" />
+                <ScalarProperty Name="TipoFiscal" ColumnName="TipoFiscal" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_TIPOFISCAL_UPDATE" FunctionName="ProcesoLogisticoModel.Store.SP_TIPOFISCAL_UPDATE" />
+          <FunctionImportMapping FunctionImportName="SP_TIPOINDUSTRIA_CREATE" FunctionName="ProcesoLogisticoModel.Store.SP_TIPOINDUSTRIA_CREATE" />
+          <FunctionImportMapping FunctionImportName="SP_TIPOINDUSTRIA_DELETE" FunctionName="ProcesoLogisticoModel.Store.SP_TIPOINDUSTRIA_DELETE" />
+          <FunctionImportMapping FunctionImportName="SP_TIPOINDUSTRIA_SELECT_ALL" FunctionName="ProcesoLogisticoModel.Store.SP_TIPOINDUSTRIA_SELECT_ALL">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProcesoLogisticoModel.SP_TIPOINDUSTRIA_SELECT_ALL_Result">
+                <ScalarProperty Name="TipoIndustriaId" ColumnName="TipoIndustriaId" />
+                <ScalarProperty Name="TipoIndustria" ColumnName="TipoIndustria" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_TIPOINDUSTRIA_UPDATE" FunctionName="ProcesoLogisticoModel.Store.SP_TIPOINDUSTRIA_UPDATE" />
+          <FunctionImportMapping FunctionImportName="SP_USUARIO_CREATE" FunctionName="ProcesoLogisticoModel.Store.SP_USUARIO_CREATE" />
+          <FunctionImportMapping FunctionImportName="SP_USUARIO_SELECT_ALL" FunctionName="ProcesoLogisticoModel.Store.SP_USUARIO_SELECT_ALL">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProcesoLogisticoModel.SP_USUARIO_SELECT_ALL_Result">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_USUARIO_UPDATE" FunctionName="ProcesoLogisticoModel.Store.SP_USUARIO_UPDATE" />
+          <FunctionImportMapping FunctionImportName="SP_USUARIOS_DELETE" FunctionName="ProcesoLogisticoModel.Store.SP_USUARIOS_DELETE" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

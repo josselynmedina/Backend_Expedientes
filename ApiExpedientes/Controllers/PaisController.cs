@@ -13,6 +13,7 @@ namespace ApiExpedientes.Controllers
     public class PaisController : Controller
     {
         private ProcesoLogisticoEntities db = new ProcesoLogisticoEntities();
+        string connection_string = "Data Source=DESKTOP-F3PHG0S;database = ProcesoLogistico; integrated security=SSPI";
 
         // GET: Pais
         public ActionResult Index()
@@ -51,15 +52,16 @@ namespace ApiExpedientes.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "PaisId,Pais,CreateDate,ModifiedDate,CreatedBy,ModifiedBy")] Pai pai)
         {
-            if (ModelState.IsValid)
-            {
-                db.Pais.Add(pai);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+            //if (ModelState.IsValid)
+            //{
+            //    db.Pais.Add(pai);
+            //    db.SaveChanges();
+            //    return RedirectToAction("Index");
+            //}
 
-            ViewBag.ModifiedBy = new SelectList(db.Usuarios, "UserId", "UserName", pai.ModifiedBy);
-            ViewBag.CreatedBy = new SelectList(db.Usuarios, "UserId", "UserName", pai.CreatedBy);
+            //ViewBag.ModifiedBy = new SelectList(db.Usuarios, "UserId", "UserName", pai.ModifiedBy);
+            //ViewBag.CreatedBy = new SelectList(db.Usuarios, "UserId", "UserName", pai.CreatedBy);
+
             return View(pai);
         }
 

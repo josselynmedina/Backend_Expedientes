@@ -301,6 +301,205 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="SP_USUARIO_INSERT" FunctionName="ProcesoLogisticoModel.Store.SP_USUARIO_INSERT" />
+    <FunctionImportMapping FunctionImportName="SP_CATEGORIA_CREATE" FunctionName="ProcesoLogisticoModel.Store.SP_CATEGORIA_CREATE" />
+    <FunctionImportMapping FunctionImportName="SP_CATEGORIA_DELETE" FunctionName="ProcesoLogisticoModel.Store.SP_CATEGORIA_DELETE" />
+    <FunctionImportMapping FunctionImportName="SP_CATEGORIA_SELECT_ALL" FunctionName="ProcesoLogisticoModel.Store.SP_CATEGORIA_SELECT_ALL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProcesoLogisticoModel.SP_CATEGORIA_SELECT_ALL_Result">
+          <ScalarProperty Name="CategoriaId" ColumnName="CategoriaId" />
+          <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_CATEGORIA_UPDATE" FunctionName="ProcesoLogisticoModel.Store.SP_CATEGORIA_UPDATE" />
+    <FunctionImportMapping FunctionImportName="SP_CLIENTE_CREATE" FunctionName="ProcesoLogisticoModel.Store.SP_CLIENTE_CREATE" />
+    <FunctionImportMapping FunctionImportName="SP_CLIENTE_DELETE" FunctionName="ProcesoLogisticoModel.Store.SP_CLIENTE_DELETE" />
+    <FunctionImportMapping FunctionImportName="SP_CLIENTE_SELECT_ALL" FunctionName="ProcesoLogisticoModel.Store.SP_CLIENTE_SELECT_ALL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProcesoLogisticoModel.SP_CLIENTE_SELECT_ALL_Result">
+          <ScalarProperty Name="ClienteId" ColumnName="ClienteId" />
+          <ScalarProperty Name="GrupoEmpresarial" ColumnName="GrupoEmpresarial" />
+          <ScalarProperty Name="RegistroTributario" ColumnName="RegistroTributario" />
+          <ScalarProperty Name="TipoRegistro" ColumnName="TipoRegistro" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="WebPage" ColumnName="WebPage" />
+          <ScalarProperty Name="Actividad" ColumnName="Actividad" />
+          <ScalarProperty Name="LineaProducto" ColumnName="LineaProducto" />
+          <ScalarProperty Name="Vision" ColumnName="Vision" />
+          <ScalarProperty Name="Mision" ColumnName="Mision" />
+          <ScalarProperty Name="Valores" ColumnName="Valores" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Industria" ColumnName="Industria" />
+          <ScalarProperty Name="TipoIndustria" ColumnName="TipoIndustria" />
+          <ScalarProperty Name="Segmento" ColumnName="Segmento" />
+          <ScalarProperty Name="RSE" ColumnName="RSE" />
+          <ScalarProperty Name="Marcas" ColumnName="Marcas" />
+          <ScalarProperty Name="Mercado" ColumnName="Mercado" />
+          <ScalarProperty Name="PaisFacturacion" ColumnName="PaisFacturacion" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_CLIENTE_UPDATE" FunctionName="ProcesoLogisticoModel.Store.SP_CLIENTE_UPDATE" />
+    <FunctionImportMapping FunctionImportName="SP_CODIGOSAP_CREATE" FunctionName="ProcesoLogisticoModel.Store.SP_CODIGOSAP_CREATE" />
+    <FunctionImportMapping FunctionImportName="SP_CODIGOSAP_DELETE" FunctionName="ProcesoLogisticoModel.Store.SP_CODIGOSAP_DELETE" />
+    <FunctionImportMapping FunctionImportName="SP_CODIGOSAP_SELECT_ALL" FunctionName="ProcesoLogisticoModel.Store.SP_CODIGOSAP_SELECT_ALL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProcesoLogisticoModel.SP_CODIGOSAP_SELECT_ALL_Result">
+          <ScalarProperty Name="CodigoSapId" ColumnName="CodigoSapId" />
+          <ScalarProperty Name="CodigoSap" ColumnName="CodigoSap" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_CODIGOSAP_UPDATE" FunctionName="ProcesoLogisticoModel.Store.SP_CODIGOSAP_UPDATE" />
+    <FunctionImportMapping FunctionImportName="SP_DOCUMENTO_CREATE" FunctionName="ProcesoLogisticoModel.Store.SP_DOCUMENTO_CREATE" />
+    <FunctionImportMapping FunctionImportName="SP_DOCUMENTO_DELETE" FunctionName="ProcesoLogisticoModel.Store.SP_DOCUMENTO_DELETE" />
+    <FunctionImportMapping FunctionImportName="SP_DOCUMENTO_SELECT_ALL" FunctionName="ProcesoLogisticoModel.Store.SP_DOCUMENTO_SELECT_ALL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProcesoLogisticoModel.SP_DOCUMENTO_SELECT_ALL_Result">
+          <ScalarProperty Name="DocumentoId" ColumnName="DocumentoId" />
+          <ScalarProperty Name="Documento" ColumnName="Documento" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_DOCUMENTO_UPDATE" FunctionName="ProcesoLogisticoModel.Store.SP_DOCUMENTO_UPDATE" />
+    <FunctionImportMapping FunctionImportName="SP_GRUPOPERSONA_CREATE" FunctionName="ProcesoLogisticoModel.Store.SP_GRUPOPERSONA_CREATE" />
+    <FunctionImportMapping FunctionImportName="SP_GRUPOPERSONA_DELETE" FunctionName="ProcesoLogisticoModel.Store.SP_GRUPOPERSONA_DELETE" />
+    <FunctionImportMapping FunctionImportName="SP_GRUPOPERSONA_SELECT_ALL" FunctionName="ProcesoLogisticoModel.Store.SP_GRUPOPERSONA_SELECT_ALL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProcesoLogisticoModel.SP_GRUPOPERSONA_SELECT_ALL_Result">
+          <ScalarProperty Name="GrupoPersonaId" ColumnName="GrupoPersonaId" />
+          <ScalarProperty Name="GrupoPersona" ColumnName="GrupoPersona" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_GRUPOPERSONA_UPDATE" FunctionName="ProcesoLogisticoModel.Store.SP_GRUPOPERSONA_UPDATE" />
+    <FunctionImportMapping FunctionImportName="SP_LINEAPRODUCTO_CREATE" FunctionName="ProcesoLogisticoModel.Store.SP_LINEAPRODUCTO_CREATE" />
+    <FunctionImportMapping FunctionImportName="SP_LINEAPRODUCTO_DELETE" FunctionName="ProcesoLogisticoModel.Store.SP_LINEAPRODUCTO_DELETE" />
+    <FunctionImportMapping FunctionImportName="SP_LINEAPRODUCTO_SELECT_ALL" FunctionName="ProcesoLogisticoModel.Store.SP_LINEAPRODUCTO_SELECT_ALL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProcesoLogisticoModel.SP_LINEAPRODUCTO_SELECT_ALL_Result">
+          <ScalarProperty Name="LineaProductoId" ColumnName="LineaProductoId" />
+          <ScalarProperty Name="LineaProducto" ColumnName="LineaProducto" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_LINEAPRODUCTO_UPDATE" FunctionName="ProcesoLogisticoModel.Store.SP_LINEAPRODUCTO_UPDATE" />
+    <FunctionImportMapping FunctionImportName="SP_PRIVILEGIO_CREATE" FunctionName="ProcesoLogisticoModel.Store.SP_PRIVILEGIO_CREATE" />
+    <FunctionImportMapping FunctionImportName="SP_PRIVILEGIO_DELETE" FunctionName="ProcesoLogisticoModel.Store.SP_PRIVILEGIO_DELETE" />
+    <FunctionImportMapping FunctionImportName="SP_PRIVILEGIO_SELECT_ALL" FunctionName="ProcesoLogisticoModel.Store.SP_PRIVILEGIO_SELECT_ALL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProcesoLogisticoModel.SP_PRIVILEGIO_SELECT_ALL_Result">
+          <ScalarProperty Name="PrivilegiosId" ColumnName="PrivilegiosId" />
+          <ScalarProperty Name="Privilegio" ColumnName="Privilegio" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_PRIVILEGIO_UPDATE" FunctionName="ProcesoLogisticoModel.Store.SP_PRIVILEGIO_UPDATE" />
+    <FunctionImportMapping FunctionImportName="SP_ROL_CREATE" FunctionName="ProcesoLogisticoModel.Store.SP_ROL_CREATE" />
+    <FunctionImportMapping FunctionImportName="SP_ROL_DELETE" FunctionName="ProcesoLogisticoModel.Store.SP_ROL_DELETE" />
+    <FunctionImportMapping FunctionImportName="SP_ROL_SELECT_ALL" FunctionName="ProcesoLogisticoModel.Store.SP_ROL_SELECT_ALL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProcesoLogisticoModel.SP_ROL_SELECT_ALL_Result">
+          <ScalarProperty Name="RolId" ColumnName="RolId" />
+          <ScalarProperty Name="RolDescription" ColumnName="RolDescription" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_ROL_UPDATE" FunctionName="ProcesoLogisticoModel.Store.SP_ROL_UPDATE" />
+    <FunctionImportMapping FunctionImportName="SP_SEGMENTO_CREATE" FunctionName="ProcesoLogisticoModel.Store.SP_SEGMENTO_CREATE" />
+    <FunctionImportMapping FunctionImportName="SP_SEGMENTO_DELETE" FunctionName="ProcesoLogisticoModel.Store.SP_SEGMENTO_DELETE" />
+    <FunctionImportMapping FunctionImportName="SP_SEGMENTO_SELECT_ALL" FunctionName="ProcesoLogisticoModel.Store.SP_SEGMENTO_SELECT_ALL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProcesoLogisticoModel.SP_SEGMENTO_SELECT_ALL_Result">
+          <ScalarProperty Name="SegmentoId" ColumnName="SegmentoId" />
+          <ScalarProperty Name="Segmento" ColumnName="Segmento" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_SEGMENTO_UPDATE" FunctionName="ProcesoLogisticoModel.Store.SP_SEGMENTO_UPDATE" />
+    <FunctionImportMapping FunctionImportName="SP_TIPOFISCAL_CREATE" FunctionName="ProcesoLogisticoModel.Store.SP_TIPOFISCAL_CREATE" />
+    <FunctionImportMapping FunctionImportName="SP_TIPOFISCAL_DELETE" FunctionName="ProcesoLogisticoModel.Store.SP_TIPOFISCAL_DELETE" />
+    <FunctionImportMapping FunctionImportName="SP_TIPOFISCAL_SELECT_ALL" FunctionName="ProcesoLogisticoModel.Store.SP_TIPOFISCAL_SELECT_ALL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProcesoLogisticoModel.SP_TIPOFISCAL_SELECT_ALL_Result">
+          <ScalarProperty Name="TipoFiscalId" ColumnName="TipoFiscalId" />
+          <ScalarProperty Name="TipoFiscal" ColumnName="TipoFiscal" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_TIPOFISCAL_UPDATE" FunctionName="ProcesoLogisticoModel.Store.SP_TIPOFISCAL_UPDATE" />
+    <FunctionImportMapping FunctionImportName="SP_TIPOINDUSTRIA_CREATE" FunctionName="ProcesoLogisticoModel.Store.SP_TIPOINDUSTRIA_CREATE" />
+    <FunctionImportMapping FunctionImportName="SP_TIPOINDUSTRIA_DELETE" FunctionName="ProcesoLogisticoModel.Store.SP_TIPOINDUSTRIA_DELETE" />
+    <FunctionImportMapping FunctionImportName="SP_TIPOINDUSTRIA_SELECT_ALL" FunctionName="ProcesoLogisticoModel.Store.SP_TIPOINDUSTRIA_SELECT_ALL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProcesoLogisticoModel.SP_TIPOINDUSTRIA_SELECT_ALL_Result">
+          <ScalarProperty Name="TipoIndustriaId" ColumnName="TipoIndustriaId" />
+          <ScalarProperty Name="TipoIndustria" ColumnName="TipoIndustria" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_TIPOINDUSTRIA_UPDATE" FunctionName="ProcesoLogisticoModel.Store.SP_TIPOINDUSTRIA_UPDATE" />
+    <FunctionImportMapping FunctionImportName="SP_USUARIO_CREATE" FunctionName="ProcesoLogisticoModel.Store.SP_USUARIO_CREATE" />
+    <FunctionImportMapping FunctionImportName="SP_USUARIO_SELECT_ALL" FunctionName="ProcesoLogisticoModel.Store.SP_USUARIO_SELECT_ALL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProcesoLogisticoModel.SP_USUARIO_SELECT_ALL_Result">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_USUARIO_UPDATE" FunctionName="ProcesoLogisticoModel.Store.SP_USUARIO_UPDATE" />
+    <FunctionImportMapping FunctionImportName="SP_USUARIOS_DELETE" FunctionName="ProcesoLogisticoModel.Store.SP_USUARIOS_DELETE" />
   </EntityContainerMapping>
 </Mapping>

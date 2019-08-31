@@ -1025,15 +1025,179 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Function Name="SP_USUARIO_INSERT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+  <Function Name="SP_CATEGORIA_CREATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Categoria" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_CATEGORIA_DELETE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CategoriaId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_CATEGORIA_SELECT_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_CATEGORIA_UPDATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CategoriaId" Type="int" Mode="In" />
+    <Parameter Name="Categoria" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_CLIENTE_CREATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GrupoEmpresarial" Type="nvarchar" Mode="In" />
+    <Parameter Name="RegistroTributario" Type="nvarchar" Mode="In" />
+    <Parameter Name="TipoRegistro" Type="int" Mode="In" />
+    <Parameter Name="Direccion" Type="nvarchar" Mode="In" />
+    <Parameter Name="WebPage" Type="nvarchar" Mode="In" />
+    <Parameter Name="Actividad" Type="nvarchar" Mode="In" />
+    <Parameter Name="LineaProducto" Type="int" Mode="In" />
+    <Parameter Name="Vision" Type="nvarchar" Mode="In" />
+    <Parameter Name="Mision" Type="nvarchar" Mode="In" />
+    <Parameter Name="Valores" Type="nvarchar" Mode="In" />
+    <Parameter Name="Pais" Type="nvarchar" Mode="In" />
+    <Parameter Name="Telefono" Type="nvarchar" Mode="In" />
+    <Parameter Name="Industria" Type="nvarchar" Mode="In" />
+    <Parameter Name="TipoIndustria" Type="int" Mode="In" />
+    <Parameter Name="Segmento" Type="int" Mode="In" />
+    <Parameter Name="RSE" Type="nvarchar" Mode="In" />
+    <Parameter Name="Marcas" Type="nvarchar" Mode="In" />
+    <Parameter Name="Mercado" Type="int" Mode="In" />
+    <Parameter Name="PaisFacturacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_CLIENTE_DELETE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ClientId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_CLIENTE_SELECT_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_CLIENTE_UPDATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ClientId" Type="int" Mode="In" />
+    <Parameter Name="GrupoEmpresarial" Type="nvarchar" Mode="In" />
+    <Parameter Name="RegistroTributario" Type="nvarchar" Mode="In" />
+    <Parameter Name="TipoRegistro" Type="int" Mode="In" />
+    <Parameter Name="Direccion" Type="nvarchar" Mode="In" />
+    <Parameter Name="WebPage" Type="nvarchar" Mode="In" />
+    <Parameter Name="Actividad" Type="nvarchar" Mode="In" />
+    <Parameter Name="LineaProducto" Type="int" Mode="In" />
+    <Parameter Name="Vision" Type="nvarchar" Mode="In" />
+    <Parameter Name="Mision" Type="nvarchar" Mode="In" />
+    <Parameter Name="Valores" Type="nvarchar" Mode="In" />
+    <Parameter Name="Pais" Type="nvarchar" Mode="In" />
+    <Parameter Name="Telefono" Type="nvarchar" Mode="In" />
+    <Parameter Name="Industria" Type="nvarchar" Mode="In" />
+    <Parameter Name="TipoIndustria" Type="int" Mode="In" />
+    <Parameter Name="Segmento" Type="int" Mode="In" />
+    <Parameter Name="RSE" Type="nvarchar" Mode="In" />
+    <Parameter Name="Marcas" Type="nvarchar" Mode="In" />
+    <Parameter Name="Mercado" Type="int" Mode="In" />
+    <Parameter Name="PaisFacturacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_CODIGOSAP_CREATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodigoSap" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_CODIGOSAP_DELETE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodigoSapId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_CODIGOSAP_SELECT_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_CODIGOSAP_UPDATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodigoSapId" Type="int" Mode="In" />
+    <Parameter Name="CodigoSap" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_DOCUMENTO_CREATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Documento" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_DOCUMENTO_DELETE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DocumentoId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_DOCUMENTO_SELECT_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_DOCUMENTO_UPDATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DocumentoId" Type="int" Mode="In" />
+    <Parameter Name="Documento" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_GRUPOPERSONA_CREATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GrupoPersona" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_GRUPOPERSONA_DELETE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GrupoPersonaId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_GRUPOPERSONA_SELECT_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_GRUPOPERSONA_UPDATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GrupoPersonaId" Type="int" Mode="In" />
+    <Parameter Name="GrupoPersona" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_LINEAPRODUCTO_CREATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LineaProducto" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_LINEAPRODUCTO_DELETE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LineaProductoId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_LINEAPRODUCTO_SELECT_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_LINEAPRODUCTO_UPDATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LineaProductoId" Type="int" Mode="In" />
+    <Parameter Name="LineaProducto" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_PRIVILEGIO_CREATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Privilegio" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_PRIVILEGIO_DELETE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PrivilegioId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_PRIVILEGIO_SELECT_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_PRIVILEGIO_UPDATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PrivilegioId" Type="int" Mode="In" />
+    <Parameter Name="Privilegio" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_ROL_CREATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Rol" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_ROL_DELETE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RolId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_ROL_SELECT_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_ROL_UPDATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RolId" Type="int" Mode="In" />
+    <Parameter Name="Rol" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_SEGMENTO_CREATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Segmento" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_SEGMENTO_DELETE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SegmentoId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_SEGMENTO_SELECT_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_SEGMENTO_UPDATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SegmentoId" Type="int" Mode="In" />
+    <Parameter Name="Segmento" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_TIPOFISCAL_CREATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TipoFiscal" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_TIPOFISCAL_DELETE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TipoFiscalId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_TIPOFISCAL_SELECT_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_TIPOFISCAL_UPDATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TipoFiscalId" Type="int" Mode="In" />
+    <Parameter Name="TipoFiscal" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_TIPOINDUSTRIA_CREATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TipoIndustria" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_TIPOINDUSTRIA_DELETE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TipoIndustriaId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_TIPOINDUSTRIA_SELECT_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_TIPOINDUSTRIA_UPDATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TipoIndustriaId" Type="int" Mode="In" />
+    <Parameter Name="TipoIndustria" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_USUARIO_CREATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="UserName" Type="nvarchar" Mode="In" />
     <Parameter Name="Password" Type="nvarchar" Mode="In" />
     <Parameter Name="FirstName" Type="nvarchar" Mode="In" />
     <Parameter Name="LastName" Type="nvarchar" Mode="In" />
-    <Parameter Name="CreatedDate" Type="date" Mode="In" />
-    <Parameter Name="ModifiedDate" Type="date" Mode="In" />
-    <Parameter Name="CreatedBy" Type="int" Mode="In" />
-    <Parameter Name="ModifiedBy" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_USUARIO_SELECT_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_USUARIO_UPDATE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="USerId" Type="int" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Password" Type="nvarchar" Mode="In" />
+    <Parameter Name="FirstName" Type="nvarchar" Mode="In" />
+    <Parameter Name="LastName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_USUARIOS_DELETE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="int" Mode="In" />
   </Function>
   <EntityContainer Name="ProcesoLogisticoModelStoreContainer">
     <EntitySet Name="Categoria" EntityType="Self.Categoria" Schema="dbo" store:Type="Tables" />

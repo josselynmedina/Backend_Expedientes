@@ -153,8 +153,8 @@ C:\Users\josse\OneDrive\Documents\GitHub\Backend_Expedientes\ApiExpedientes\bin\
 C:\Users\josse\OneDrive\Documents\GitHub\Backend_Expedientes\ApiExpedientes\bin\Newtonsoft.Json.xml
 C:\Users\josse\OneDrive\Documents\GitHub\Backend_Expedientes\ApiExpedientes\bin\Antlr3.Runtime.pdb
 C:\Users\josse\OneDrive\Documents\GitHub\Backend_Expedientes\ApiExpedientes\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\josse\OneDrive\Documents\GitHub\Backend_Expedientes\ApiExpedientes\obj\Debug\ApiExpedientes.csprojAssemblyReference.cache
 C:\Users\josse\OneDrive\Documents\GitHub\Backend_Expedientes\ApiExpedientes\obj\Debug\ApiExpedientes.csproj.CoreCompileInputs.cache
 C:\Users\josse\OneDrive\Documents\GitHub\Backend_Expedientes\ApiExpedientes\obj\Debug\ApiExpedientes.csproj.CopyComplete
 C:\Users\josse\OneDrive\Documents\GitHub\Backend_Expedientes\ApiExpedientes\obj\Debug\ApiExpedientes.dll
 C:\Users\josse\OneDrive\Documents\GitHub\Backend_Expedientes\ApiExpedientes\obj\Debug\ApiExpedientes.pdb
+C:\Users\josse\OneDrive\Documents\GitHub\Backend_Expedientes\ApiExpedientes\obj\Debug\ApiExpedientes.csprojAssemblyReference.cache
